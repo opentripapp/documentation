@@ -3902,9 +3902,9 @@ Use JSON body request
 </tbody></table>
 
 <aside class="notice">
-The time to make the payment process is 60 minutes until the order will be canceled.
-time to process payment : 15 minute
-time to complete payment : 45 minute
+The time to make the payment process is 1 day until the order will be canceled.
+time to process payment : 5 minute
+time to complete payment : 1 day
 </aside>
 
 <h2 id="get-payment-token">Get Payment Token</h2>
@@ -3956,6 +3956,236 @@ time to complete payment : 45 minute
 The time to make the payment process is 60 minutes until the order will be canceled.
 time to process payment : 15 minute
 time to complete payment : 45 minute
+</aside>
+
+<h2 id="get-order-id-multiple">Get Order ID (Multiple)</h2>
+
+<blockquote>
+<p>Success Result</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"booking_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OP7N9YCYD5DI"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">155000</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"multiple"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"users_paid_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"promo_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"59ef58d6a0306f909071fbf4"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"original_price"</span><span class="p">:</span><span class="w"> </span><span class="mi">165000</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>Already Join Trip</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UNKNOWN_ERROR"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Something went wrong, muhammadarizals1@gmail.com are already joining this trip"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+<blockquote>
+<p>Contain Trip Leader</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UNKNOWN_ERROR"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Something went wrong, smarthap@gmail.com are the leader of this trip"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>Trip Quota Insufficient</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"QUOTA_INSUFFICIENT"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The remaining quota is insufficient, only 2 left"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>Promo Code Error</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PROMO_CODE_EXPIRED"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Promo code has expired"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+    </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"INVALID_PROMO_CODE"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Promo code does not work for this trip"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+    </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PROMO_CODE_EXPIRED"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Promo period not valid yet"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+<p>get order id to (this is for mobile sdk) support multiple payment.</p>
+
+<h3 id="endpoint">Endpoint</h3>
+
+<p><code class="prettyprint">POST /booking/multiple/get_order_id</code></p>
+
+<h3 id="body-parameters">Body Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Example/Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>trip_id</td>
+<td>true</td>
+<td>trip <code class="prettyprint">_id</code></td>
+</tr>
+<tr>
+<td>joined_id</td>
+<td>true</td>
+<td><code class="prettyprint">_joined_id</code> of field in date trip</td>
+</tr>
+<tr>
+<td>users</td>
+<td>true</td>
+<td>array of users email to be paid</td>
+</tr>
+<tr>
+<td>promo_code</td>
+<td>false</td>
+<td>voucher code</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">
+for once usage promo_code only work when user never use that promo_code before
+</aside>
+
+<aside class="notice">
+The time to make the payment process is 1 day until the order will be canceled.
+time to process payment : 5 minute
+time to complete payment : 1 day
+</aside>
+
+<h2 id="get-payment-token-multiple">Get Payment Token (Multiple)</h2>
+
+<blockquote>
+<p>Success Result</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"booking_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OP7N9YCYD5DI"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">155000</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"multiple"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"users_paid_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"promo_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"59ef58d6a0306f909071fbf4"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"original_price"</span><span class="p">:</span><span class="w"> </span><span class="mi">165000</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6f611fa7-9149-4a42-83a6-897d63281bbe"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"redirect_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://app.midtrans.com/snap/v2/vtweb/6f611fa7-9149-4a42-83a6-897d63281bbe"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>Already Join Trip</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UNKNOWN_ERROR"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Something went wrong, muhammadarizals1@gmail.com are already joining this trip"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+<blockquote>
+<p>Contain Trip Leader</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UNKNOWN_ERROR"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Something went wrong, smarthap@gmail.com are the leader of this trip"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>Trip Quota Insufficient</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"QUOTA_INSUFFICIENT"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The remaining quota is insufficient, only 2 left"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>Promo Code Error</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PROMO_CODE_EXPIRED"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Promo code has expired"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+    </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"INVALID_PROMO_CODE"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Promo code does not work for this trip"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+    </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PROMO_CODE_EXPIRED"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Promo period not valid yet"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+<p>get payment token to (this is for web snap) support multiple payment.</p>
+
+<h3 id="endpoint">Endpoint</h3>
+
+<p><code class="prettyprint">POST /booking/multiple/get_payment_token</code></p>
+
+<h3 id="body-parameters">Body Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Example/Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>trip_id</td>
+<td>true</td>
+<td>trip <code class="prettyprint">_id</code></td>
+</tr>
+<tr>
+<td>joined_id</td>
+<td>true</td>
+<td><code class="prettyprint">_joined_id</code> of field in date trip</td>
+</tr>
+<tr>
+<td>users</td>
+<td>true</td>
+<td>array of users email to be paid</td>
+</tr>
+<tr>
+<td>promo_code</td>
+<td>false</td>
+<td>voucher code</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">
+for once usage promo_code only work when user never use that promo_code before
+</aside>
+
+<aside class="notice">
+The time to make the payment process is 1 day until the order will be canceled.
+time to process payment : 5 minute
+time to complete payment : 1 day
 </aside>
 
 <h2 id="cancel-booking">Cancel Booking</h2>
@@ -4018,25 +4248,25 @@ time to complete payment : 45 minute
             </span><span class="s2">"trip_leader"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
         </span><span class="p">},</span><span class="w">
          </span><span class="p">{</span><span class="w">
-                    </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"598adeaea907bd6aee3928b5"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"_leader"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                        </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5927f48c8553514047eee97c"</span><span class="p">,</span><span class="w">
-                        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tes"</span><span class="w">
-                    </span><span class="p">},</span><span class="w">
-                    </span><span class="s2">"date"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                        </span><span class="s2">"start"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-09-01T00:00:00.000Z"</span><span class="p">,</span><span class="w">
-                        </span><span class="s2">"end"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-09-01T00:00:00.000Z"</span><span class="w">
-                    </span><span class="p">},</span><span class="w">
-                    </span><span class="s2">"_trip"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                        </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"598adeaea907bd6aee3928b6"</span><span class="p">,</span><span class="w">
-                        </span><span class="s2">"main_image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https:///tes"</span><span class="p">,</span><span class="w">
-                        </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tes"</span><span class="p">,</span><span class="w">
-                        </span><span class="s2">"destination"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Tangkuban Perahu"</span><span class="w">
-                    </span><span class="p">},</span><span class="w">
-                    </span><span class="s2">"quota"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"trip_leader"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
-                </span><span class="p">}</span><span class="w">
+            </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"598adeaea907bd6aee3928b5"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"_leader"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5927f48c8553514047eee97c"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tes"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="s2">"date"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"start"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-09-01T00:00:00.000Z"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"end"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-09-01T00:00:00.000Z"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="s2">"_trip"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"598adeaea907bd6aee3928b6"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"main_image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https:///tes"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tes"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"destination"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Tangkuban Perahu"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="s2">"quota"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"trip_leader"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+          </span><span class="p">}</span><span class="w">
     </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
@@ -4069,6 +4299,313 @@ time to complete payment : 45 minute
 <td>sort</td>
 <td>optional</td>
 <td>sort</td>
+</tr>
+</tbody></table>
+
+<h2 id="get-list-booking-request">Get List Booking Request</h2>
+
+<blockquote>
+<p>Success Result</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5a0b1c03458a0f6130f6d03e"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:39:27.954Z"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:38:27.621Z"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"_author"</span><span class="p">:</span><span class="w"> </span><span class="s2">"59c5c89665a538001088798f"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"_trip"</span><span class="p">:</span><span class="w"> </span><span class="s2">"59c87a84ed5d72000ffba17c"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"_joined_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"59c87a83ed5d72000ffba17b"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OPBIQ1WD6YNQ"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">330000</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"original_price"</span><span class="p">:</span><span class="w"> </span><span class="mi">165000</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"multiple"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"promo_code"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5a027d96fae0bd21345becab"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:33:28.808Z"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-08T03:44:22.112Z"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AAAAA"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"discount_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"price"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"start"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-12T17:00:00.000Z"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"expiry"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-12-20T17:00:00.000Z"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"discount"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"__v"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"once_promo"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="s2">"users"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                        </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5a0a90f368d9ce60f872239d"</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tumpistudio"</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                            </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tumpistudio@gmail.com"</span><span class="w">
+                        </span><span class="p">}</span><span class="w">
+                    </span><span class="p">},</span><span class="w">
+                    </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5a0b1c03458a0f6130f6d042"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"promo"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                        </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5a0b172a8b8faf7d50bf7605"</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"vitayufita14"</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                            </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"vitayufita14@gmail.com"</span><span class="w">
+                        </span><span class="p">}</span><span class="w">
+                    </span><span class="p">},</span><span class="w">
+                    </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5a0b1c03458a0f6130f6d041"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"promo"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"expired"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"__v"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"snap"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6f611fa7-9149-4a42-83a6-897d63281bbe"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"redirect_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://app.midtrans.com/snap/v2/vtweb/6f611fa7-9149-4a42-83a6-897d63281bbe"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5a0b1b4a458a0f6130f6d039"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:36:22.860Z"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:35:22.835Z"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"_author"</span><span class="p">:</span><span class="w"> </span><span class="s2">"59c5c89665a538001088798f"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"_trip"</span><span class="p">:</span><span class="w"> </span><span class="s2">"59c87a84ed5d72000ffba17c"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"_joined_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"59c87a83ed5d72000ffba17b"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OP5WGEE51JSI"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">330000</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"original_price"</span><span class="p">:</span><span class="w"> </span><span class="mi">165000</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"multiple"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"promo_code"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5a027d96fae0bd21345becab"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:33:28.808Z"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-08T03:44:22.112Z"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AAAAA"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"discount_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"price"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"start"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-12T17:00:00.000Z"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"expiry"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-12-20T17:00:00.000Z"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"discount"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"__v"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"once_promo"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="s2">"users"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                        </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5a0a90f368d9ce60f872239d"</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tumpistudio"</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                            </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tumpistudio@gmail.com"</span><span class="w">
+                        </span><span class="p">}</span><span class="w">
+                    </span><span class="p">},</span><span class="w">
+                    </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5a0b1b4a458a0f6130f6d03d"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"promo"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                        </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5a0b172a8b8faf7d50bf7605"</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"vitayufita14"</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                            </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"vitayufita14@gmail.com"</span><span class="w">
+                        </span><span class="p">}</span><span class="w">
+                    </span><span class="p">},</span><span class="w">
+                    </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5a0b1b4a458a0f6130f6d03c"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"promo"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"expired"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"__v"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+ </span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>get user booking request list</p>
+
+<h3 id="endpoint">Endpoint</h3>
+
+<p><code class="prettyprint">GET /booking/list</code></p>
+
+<h3 id="query-parameters">Query Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Example/Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>limit</td>
+<td>optional</td>
+<td>default &lsquo;10&rsquo;</td>
+</tr>
+<tr>
+<td>offset</td>
+<td>optional</td>
+<td>0</td>
+</tr>
+<tr>
+<td>sort</td>
+<td>optional</td>
+<td>sort</td>
+</tr>
+<tr>
+<td>type</td>
+<td>optional</td>
+<td>&ldquo;multiple&rdquo;</td>
+</tr>
+<tr>
+<td>booking_code</td>
+<td>optional</td>
+<td>&ldquo;OPIUHS89JH&rdquo;</td>
+</tr>
+<tr>
+<td>status</td>
+<td>optional</td>
+<td>&ldquo;waiting&rdquo; &ldquo;pending&rdquo; &ldquo;success&rdquo;</td>
+</tr>
+<tr>
+<td>trip_id</td>
+<td>optional</td>
+<td>&ldquo;id trip&rdquo;</td>
+</tr>
+<tr>
+<td>joined_id</td>
+<td>optional</td>
+<td>&ldquo;id joined trip&rdquo;</td>
+</tr>
+<tr>
+<td>promo_code</td>
+<td>optional</td>
+<td>&ldquo;PROMO10&rdquo;</td>
+</tr>
+</tbody></table>
+
+<h2 id="get-single-booking">Get Single Booking</h2>
+
+<blockquote>
+<p>Success Result</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5a0b1c03458a0f6130f6d03e"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:39:27.954Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:38:27.621Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"_author"</span><span class="p">:</span><span class="w"> </span><span class="s2">"59c5c89665a538001088798f"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"_trip"</span><span class="p">:</span><span class="w"> </span><span class="s2">"59c87a84ed5d72000ffba17c"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"_joined_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"59c87a83ed5d72000ffba17b"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OPBIQ1WD6YNQ"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">330000</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"original_price"</span><span class="p">:</span><span class="w"> </span><span class="mi">165000</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"multiple"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"promo_code"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5a027d96fae0bd21345becab"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-14T16:33:28.808Z"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-08T03:44:22.112Z"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AAAAA"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"discount_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"price"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"start"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-11-12T17:00:00.000Z"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"expiry"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-12-20T17:00:00.000Z"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"discount"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"__v"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"once_promo"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"users"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5a0a90f368d9ce60f872239d"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tumpistudio"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                        </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tumpistudio@gmail.com"</span><span class="w">
+                    </span><span class="p">}</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5a0b1c03458a0f6130f6d042"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"promo"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5a0b172a8b8faf7d50bf7605"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"vitayufita14"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                        </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"vitayufita14@gmail.com"</span><span class="w">
+                    </span><span class="p">}</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5a0b1c03458a0f6130f6d041"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"promo"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"expired"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"__v"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"snap"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6f611fa7-9149-4a42-83a6-897d63281bbe"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"redirect_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://app.midtrans.com/snap/v2/vtweb/6f611fa7-9149-4a42-83a6-897d63281bbe"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>get single user booking request list</p>
+
+<h3 id="endpoint">Endpoint</h3>
+
+<p><code class="prettyprint">GET /booking/list</code></p>
+
+<h3 id="query-parameters">Query Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Example/Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>optional</td>
+<td>&lsquo;id booking&rsquo;</td>
+</tr>
+<tr>
+<td>limit</td>
+<td>optional</td>
+<td>default &lsquo;10&rsquo;</td>
+</tr>
+<tr>
+<td>offset</td>
+<td>optional</td>
+<td>0</td>
+</tr>
+<tr>
+<td>sort</td>
+<td>optional</td>
+<td>sort</td>
+</tr>
+<tr>
+<td>type</td>
+<td>optional</td>
+<td>&ldquo;multiple&rdquo;</td>
+</tr>
+<tr>
+<td>booking_code</td>
+<td>optional</td>
+<td>&ldquo;OPIUHS89JH&rdquo;</td>
+</tr>
+<tr>
+<td>status</td>
+<td>optional</td>
+<td>&ldquo;waiting&rdquo; &ldquo;pending&rdquo; &ldquo;success&rdquo;</td>
+</tr>
+<tr>
+<td>trip_id</td>
+<td>optional</td>
+<td>&ldquo;id trip&rdquo;</td>
+</tr>
+<tr>
+<td>joined_id</td>
+<td>optional</td>
+<td>&ldquo;id joined trip&rdquo;</td>
+</tr>
+<tr>
+<td>promo_code</td>
+<td>optional</td>
+<td>&ldquo;PROMO10&rdquo;</td>
 </tr>
 </tbody></table>
 
