@@ -5,8 +5,7 @@ language_tabs:
   - json
 
 toc_footers:
-  - <a href='#'>Sign Up for a Developer Key</a>
-  - <a href='https://github.com/tripit/slate'>Documentation Powered by Slate</a>
+  - <a href='https://developers.opentripapp.com/'>Sign Up for a Developer Key</a>
 
 includes:
   - account
@@ -32,16 +31,29 @@ search: true
 
 # Introduction
 
-Welcome to Open Trip API! Use `http://opentrip.trivalier.id` for endpoint host
+Welcome to Open Trip API!
+
+Use `https://api.opentripapp.com/` for production.
+
+Use `https://sandbox.opentripapp.com/` for sandbox
 
 
 # Authentication
 
-Open Trip Authentication using JWT
+Open Trip Authentication, add header :
+
 `Authorization: Bearer <access_token>`
+
+`x-api-key: <your_key>`
 
 <aside class="notice">
 You must replace <code>access-token</code> with access-token.
 </aside>
+
+<aside class="notice">
+You must replace <code>your_key</code> with with your production or sandbox key.
+<a href='https://developers.opentripapp.com/'>Sign Up for a Developer Key</a>
+</aside>
+
 
 
