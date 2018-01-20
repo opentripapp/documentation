@@ -219,8 +219,7 @@
       <div id="toc">
       </div>
         <ul class="toc-footer">
-            <li><a href='#'>Sign Up for a Developer Key</a></li>
-            <li><a href='https://github.com/tripit/slate'>Documentation Powered by Slate</a></li>
+            <li><a href='https://developers.opentripapp.com/'>Sign Up for a Developer Key</a></li>
         </ul>
     </div>
     <div class="page-wrapper">
@@ -228,15 +227,27 @@
       <div class="content">
         <h1 id="introduction">Introduction</h1>
 
-<p>Welcome to Open Trip API! Use <code class="prettyprint">http://opentrip.trivalier.id</code> for endpoint host</p>
+<p>Welcome to Open Trip API!</p>
+
+<p>Use <code class="prettyprint">https://api.opentripapp.com/</code> for production.</p>
+
+<p>Use <code class="prettyprint">https://sandbox.opentripapp.com/</code> for sandbox</p>
 
 <h1 id="authentication">Authentication</h1>
 
-<p>Open Trip Authentication using JWT
-<code class="prettyprint">Authorization: Bearer &lt;access_token&gt;</code></p>
+<p>Open Trip Authentication, add header :</p>
+
+<p><code class="prettyprint">Authorization: Bearer &lt;access_token&gt;</code></p>
+
+<p><code class="prettyprint">x-api-key: &lt;your_key&gt;</code></p>
 
 <aside class="notice">
 You must replace <code>access-token</code> with access-token.
+</aside>
+
+<aside class="notice">
+You must replace <code>your_key</code> with with your production or sandbox key.
+<a href='https://developers.opentripapp.com/'>Sign Up for a Developer Key</a>
 </aside>
 
           <h1 id="account">Account</h1>
