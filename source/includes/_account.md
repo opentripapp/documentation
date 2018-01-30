@@ -321,6 +321,28 @@ Name | Required | Description | example
 --------- | ---------| -----------| -------------
 Authorization | true | access_token | `Authorization: Bearer <access_token>`
 
+## Resend Email Verification
+
+> Result
+
+```json
+{
+  "error": false,
+}
+```
+
+Adding phone number to user
+
+### Endpoint
+
+`POST /user/resend_email_verification`
+
+### Header
+
+Name | Required | Description | example
+--------- | ---------| -----------| -------------
+Authorization | true | access_token | `Authorization: Bearer <access_token>`
+
 
 
 ## Verify Phone Number

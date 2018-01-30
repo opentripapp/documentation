@@ -15,6 +15,7 @@ includes:
   - media
   - category
   - trip
+  - private_trip
   - rating
   - promos
   - booking
