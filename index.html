@@ -709,6 +709,39 @@ You must replace <code>access_token</code> with access_token.
 </tr>
 </tbody></table>
 
+<h2 id="resend-email-verification">Resend Email Verification</h2>
+
+<blockquote>
+<p>Result</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Adding phone number to user</p>
+
+<h3 id="endpoint">Endpoint</h3>
+
+<p><code class="prettyprint">POST /user/resend_email_verification</code></p>
+
+<h3 id="header">Header</h3>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Required</th>
+<th>Description</th>
+<th>example</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Authorization</td>
+<td>true</td>
+<td>access_token</td>
+<td><code class="prettyprint">Authorization: Bearer &lt;access_token&gt;</code></td>
+</tr>
+</tbody></table>
+
 <h2 id="verify-phone-number">Verify Phone Number</h2>
 
 <blockquote>
@@ -3515,6 +3548,301 @@ Use JSON body request
 <h3 id="endpoint">Endpoint</h3>
 
 <p><code class="prettyprint">DELETE /user/trip/bookmark/delete_all</code></p>
+
+          <h1 id="private-trip">Private Trip</h1>
+
+<h2 id="create-request-private-trip">Create Request Private Trip</h2>
+
+<blockquote>
+<p>Success Result</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"__v"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-01-30T05:30:38.569Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-01-30T05:30:38.569Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"_author"</span><span class="p">:</span><span class="w"> </span><span class="s2">"59c5c89665a538001088798f"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"destination"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bali"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-05-21T00:00:00.000Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"phone_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12121212"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"how_many"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"njayen"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5a7002fe3b7b3117ac831e18"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>create private trip request</p>
+
+<h3 id="endpoint">Endpoint</h3>
+
+<p><code class="prettyprint">POST /trip/private_trip</code></p>
+
+<h3 id="body-parameters">Body Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Example/Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>destination</td>
+<td>true</td>
+<td>destination name</td>
+</tr>
+<tr>
+<td>date</td>
+<td>true</td>
+<td>date of trip <code class="prettyprint">yyyy-mm-dd</code> format</td>
+</tr>
+<tr>
+<td>phone_number</td>
+<td>true</td>
+<td>user phone number</td>
+</tr>
+<tr>
+<td>how_many</td>
+<td>true</td>
+<td>how many private trip member</td>
+</tr>
+<tr>
+<td>name</td>
+<td>optional</td>
+<td>user name or ??</td>
+</tr>
+<tr>
+<td>location</td>
+<td>optional</td>
+<td>metting point location, use array  <code class="prettyprint">[longitude,latitude]</code></td>
+</tr>
+</tbody></table>
+
+<h2 id="get-request-private-trip">Get Request Private Trip</h2>
+
+<blockquote>
+<p>Success Result</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5a7002fe3b7b3117ac831e18"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-01-30T05:30:38.569Z"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-01-30T05:30:38.569Z"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"_author"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"59c5c89665a538001088798f"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"arizal"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"muhammadarizals1@gmail.com"</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="s2">"phone_number"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+6285722244744"</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="s2">"profile_picture"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://s3-ap-southeast-1.amazonaws.com/opentrip-media/59c5c89665a538001088798f_dd4e289d20617520.jpg"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="s2">"destination"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bali"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-05-21T00:00:00.000Z"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"phone_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12121212"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"how_many"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"njayen"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"__v"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5a70052170130c43e098b2be"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-01-30T05:39:45.463Z"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-01-30T05:39:45.463Z"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"_author"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"59c5c89665a538001088798f"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"arizal"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"muhammadarizals1@gmail.com"</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="s2">"phone_number"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+6285722244744"</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="s2">"profile_picture"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://s3-ap-southeast-1.amazonaws.com/opentrip-media/59c5c89665a538001088798f_dd4e289d20617520.jpg"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="s2">"destination"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jakarta"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-05-21T00:00:00.000Z"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"phone_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12121212"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"how_many"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"njayen"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"__v"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>get private trip request</p>
+
+<h3 id="endpoint">Endpoint</h3>
+
+<p><code class="prettyprint">GET /trip/private_trip</code></p>
+
+<h3 id="query-parameters">Query Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Example/Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>offset</td>
+<td>optional</td>
+<td><code class="prettyprint">0</code> default offset is <code class="prettyprint">0</code></td>
+</tr>
+<tr>
+<td>limit</td>
+<td>optional</td>
+<td><code class="prettyprint">10</code> default limit is <code class="prettyprint">15</code></td>
+</tr>
+<tr>
+<td>sort</td>
+<td>optional</td>
+<td>sorting</td>
+</tr>
+<tr>
+<td>how_many</td>
+<td>optional</td>
+<td>number</td>
+</tr>
+<tr>
+<td>destination</td>
+<td>optional</td>
+<td>destination name</td>
+</tr>
+</tbody></table>
+
+<h2 id="get-my-request-private-trip">Get My Request Private Trip</h2>
+
+<blockquote>
+<p>Success Result</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5a7002fe3b7b3117ac831e18"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-01-30T05:30:38.569Z"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-01-30T05:30:38.569Z"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"_author"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"59c5c89665a538001088798f"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"arizal"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"muhammadarizals1@gmail.com"</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="s2">"phone_number"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+6285722244744"</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="s2">"profile_picture"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://s3-ap-southeast-1.amazonaws.com/opentrip-media/59c5c89665a538001088798f_dd4e289d20617520.jpg"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="s2">"destination"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bali"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-05-21T00:00:00.000Z"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"phone_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12121212"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"how_many"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"njayen"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"__v"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5a70052170130c43e098b2be"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-01-30T05:39:45.463Z"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-01-30T05:39:45.463Z"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"_author"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"59c5c89665a538001088798f"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"arizal"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"muhammadarizals1@gmail.com"</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="s2">"phone_number"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+6285722244744"</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="s2">"profile_picture"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://s3-ap-southeast-1.amazonaws.com/opentrip-media/59c5c89665a538001088798f_dd4e289d20617520.jpg"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="s2">"destination"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jakarta"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-05-21T00:00:00.000Z"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"phone_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12121212"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"how_many"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"njayen"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"__v"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>get private trip request</p>
+
+<h3 id="endpoint">Endpoint</h3>
+
+<p><code class="prettyprint">GET /trip/private_trip/me</code></p>
+
+<h3 id="query-parameters">Query Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Example/Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>offset</td>
+<td>optional</td>
+<td><code class="prettyprint">0</code> default offset is <code class="prettyprint">0</code></td>
+</tr>
+<tr>
+<td>limit</td>
+<td>optional</td>
+<td><code class="prettyprint">10</code> default limit is <code class="prettyprint">15</code></td>
+</tr>
+<tr>
+<td>sort</td>
+<td>optional</td>
+<td>sorting</td>
+</tr>
+<tr>
+<td>how_many</td>
+<td>optional</td>
+<td>number</td>
+</tr>
+<tr>
+<td>destination</td>
+<td>optional</td>
+<td>destination name</td>
+</tr>
+</tbody></table>
+
+<h2 id="delete-my-request-private-trip">Delete My Request Private Trip</h2>
+
+<blockquote>
+<p>Success Result</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>delete private trip request</p>
+
+<h3 id="endpoint">Endpoint</h3>
+
+<p><code class="prettyprint">DELETE /trip/private_trip</code></p>
+
+<h3 id="query-parameters">Query Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Example/Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>true</td>
+<td>request id</td>
+</tr>
+</tbody></table>
 
           <h1 id="review-and-rating">Review and Rating</h1>
 
