@@ -41,6 +41,8 @@ Parameter | Required | Description
 name | true | Fullname for new user
 email | true | Email for new user
 password | true | Password for new user
+referral_code | optional | referral link or code or email or phone
+referral_type | optional | type of referral code `email` or `phone_number` default `code`
 
 <aside class="success">
 Remember — a happy kitten is an authenticated kitten!

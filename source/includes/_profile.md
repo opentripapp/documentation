@@ -32,6 +32,7 @@ device_token | true | device generated token for fcm
     "updatedAt": "2017-05-23T02:15:21.075Z",
     "createdAt": "2017-05-23T02:12:41.283Z",
     "name": "njayen",
+    "referral_code": "1906QR75766570615",
     "address": "jalan jalan",
     "bio": "Gas",
     "birth_date": "1970-01-18T07:24:20.306Z",
