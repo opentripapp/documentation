@@ -33,7 +33,7 @@ sort | optional | `expiry` is default sort
 limit | optional | `25` is default limit
 offset | optional | `0` is default offset
 
-## Check Promo Code
+## Get Promo Code
 
 > Result
 
@@ -51,13 +51,6 @@ offset | optional | `0` is default offset
 
 check promo code
 
-### Discount Type
-
-Parameter |  Description
---------- |  --------
-price | price base discount
-percent | percent base discount
-
 
 ### Endpoint
 
@@ -69,3 +62,48 @@ percent | percent base discount
 Parameter | Required | Description
 --------- | ------- | --------
 code | true | promo code
+
+
+
+
+## Check Promo Code
+
+> Error Result
+
+```json
+{
+    "error": true,
+    "code": "NOT_FOUND",
+    "message": "code not found"
+}
+```
+
+> Success Result
+
+```json
+{
+    "error": false,
+    "data": {
+        "code": "2D",
+        "calculated_price": 98000
+    }
+}
+```
+
+check promo code and get calculated price
+
+
+### Endpoint
+
+`GET /promos/check_code`
+
+
+### Query Parameters
+
+Parameter | Required | Description
+--------- | ------- | --------
+code | true | promo code
+trip_id | true | id of trip
+trip_price | true | price of trip
+
+
