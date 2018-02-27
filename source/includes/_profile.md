@@ -72,6 +72,58 @@ Parameter | Required | Description
 --------- | ------- | -----------
 id | true | user id `_id`
 
+## Get Other User Profile (Withour Auth)
+
+> Result
+
+```json
+{
+  "error": false,
+  "data": {
+    "_id": "59239a99feb15e3830fd8813",
+    "updatedAt": "2017-05-23T02:15:21.075Z",
+    "createdAt": "2017-05-23T02:12:41.283Z",
+    "name": "njayen",
+    "referral_code": "1906QR75766570615",
+    "address": "jalan jalan",
+    "bio": "Gas",
+    "birth_date": "1970-01-18T07:24:20.306Z",
+    "profile_cover": "url alamat cover",
+    "profile_picture": "url alamat cover",
+    "point": 0,
+    "interest": [
+      "apaya",
+      "ehh"
+    ],
+    "gender": 0,
+    "block": 0,
+    "following": 0,
+    "phone_number": {
+      "data": "08783666786",
+      "verified": false
+    },
+    "email": {
+      "data": "muhammadarizals1@gmail.com",
+      "verified": false
+    },
+    "followers": 0,
+    "follow_you":false
+  }
+}
+```
+
+Get user data profile by id without authentication
+
+### Endpoint
+
+`GET /user/other_profile`
+
+### Query Parameters
+
+Parameter | Required | Description
+--------- | ------- | -----------
+id | true | user id `_id`
+
 
 
 
