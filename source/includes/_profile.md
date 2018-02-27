@@ -104,7 +104,7 @@ id | true | user id `_id`
     },
     "email": {
       "data": "muhammadarizals1@gmail.com",
-      "verified": false
+      "verified": falsecl
     },
     "followers": 0,
     "follow_you":false
