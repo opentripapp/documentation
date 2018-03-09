@@ -95,6 +95,7 @@ offset    | false   | `1` default offset is `0`
 limit     | false   | `10` default limit is `10`
 sort      | false   | `date.start` default is `date.start` `sort` could be anything
 leader    |false | `leader _id` , to get spesific leader trip
+user_type | false | `leader` for trip leader only
 
 ### Trip Type
 Parameter | Required | Example
