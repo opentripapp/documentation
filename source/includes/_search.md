@@ -94,6 +94,7 @@ type      | true    | `trip` `trip_destination_suggestion` `user` `tag`
 offset    | false   | `1` default offset is `0`
 limit     | false   | `10` default limit is `10`
 sort      | false   | `date.start` default is `date.start` `sort` could be anything
+leader    |false | `leader _id` , to get spesific leader trip
 
 ### Trip Type
 Parameter | Required | Example
