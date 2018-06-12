@@ -1,62 +1,67 @@
 # Profile
 
-## Upload Device Token
-> Success Result
-
-```json
-{
-  "error": false,
-}
-```
-### Endpoint
-
-to update user device fcm token, to send push notification.
-
-`PUT /user/update/token`
-
-### Query Parameters
-Parameter | Required | Description
---------- | ------- | -----------
-device_token | true | device generated token for fcm
-
-
 ## Get User Profile
+
+```shell
+curl -X GET \
+  https://api.opentripapp.com/user/profile?id=59c63a5fe0bc2400117a87fc \
+  -H 'accept-language: en' \
+  -H 'api-client: android' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'device-id: 123' \
+  -H 'Authorization: Bearer TOKEN'
+  -H 'x-api-key: YOUR_API_KEY' \
+```
 
 > Result
 
 ```json
 {
-  "error": false,
-  "data": {
-    "_id": "59239a99feb15e3830fd8813",
-    "updatedAt": "2017-05-23T02:15:21.075Z",
-    "createdAt": "2017-05-23T02:12:41.283Z",
-    "name": "njayen",
-    "referral_code": "1906QR75766570615",
-    "address": "jalan jalan",
-    "bio": "Gas",
-    "birth_date": "1970-01-18T07:24:20.306Z",
-    "profile_cover": "url alamat cover",
-    "profile_picture": "url alamat cover",
-    "point": 0,
-    "interest": [
-      "apaya",
-      "ehh"
-    ],
-    "gender": 0,
-    "block": 0,
-    "following": 0,
-    "phone_number": {
-      "data": "08783666786",
-      "verified": false
-    },
-    "email": {
-      "data": "muhammadarizals1@gmail.com",
-      "verified": false
-    },
-    "followers": 0,
-    "follow_you":false
-  }
+    "error": false,
+    "data": {
+        "_id": "59c63a5fe0bc2400117a87fc",
+        "updatedAt": "2018-02-20T15:03:44.705Z",
+        "createdAt": "2017-09-23T10:41:35.643Z",
+        "name": "Open Trip Official",
+        "rating": {
+            "point": 5,
+            "count": 2
+        },
+        "point": 0,
+        "interest": [
+            "Traveling",
+            " Networking",
+            " Having Fun"
+        ],
+        "gender": 1,
+        "block": 0,
+        "hide_post": [],
+        "following": 9,
+        "email": {
+            "data": "hello@opentripapp.com",
+            "verified": false
+        },
+        "__v": 1,
+        "phone_number": {
+            "data": "08118808877",
+            "verified": true
+        },
+        "profile_picture": "https://s3-ap-southeast-1.amazonaws.com/opentrip-media/59c63a5fe0bc2400117a87fc_81bba8be06307fce.jpg",
+        "profile_cover": "https://s3-ap-southeast-1.amazonaws.com/opentrip-media/59c63a5fe0bc2400117a87fc_ae020d420134dcf2.jpg",
+        "address": "Bandung",
+        "birth_date": "2017-03-04T00:00:00.000Z",
+        "bio": "Make Friends Along the Way",
+        "verified": false,
+        "status": {
+            "last_active": "2018-02-20T15:03:44.704Z",
+            "online": false
+        },
+        "follow_you": false,
+        "is_follow": true,
+        "followers": 5,
+        "open_trips": 1
+    }
 }
 ```
 
@@ -73,42 +78,66 @@ Parameter | Required | Description
 id | true | user id `_id`
 
 ## Get Other User Profile (Withour Auth)
+```shell
+curl -X GET \
+  https://api.opentripapp.com/user/other_profile?id=59c63a5fe0bc2400117a87fc \
+  -H 'accept-language: en' \
+  -H 'api-client: android' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'device-id: 123' \
+  -H 'x-api-key: YOUR_API_KEY' \
+```
+
 
 > Result
 
 ```json
 {
-  "error": false,
-  "data": {
-    "_id": "59239a99feb15e3830fd8813",
-    "updatedAt": "2017-05-23T02:15:21.075Z",
-    "createdAt": "2017-05-23T02:12:41.283Z",
-    "name": "njayen",
-    "referral_code": "1906QR75766570615",
-    "address": "jalan jalan",
-    "bio": "Gas",
-    "birth_date": "1970-01-18T07:24:20.306Z",
-    "profile_cover": "url alamat cover",
-    "profile_picture": "url alamat cover",
-    "point": 0,
-    "interest": [
-      "apaya",
-      "ehh"
-    ],
-    "gender": 0,
-    "block": 0,
-    "following": 0,
-    "phone_number": {
-      "data": "08783666786",
-      "verified": false
-    },
-    "email": {
-      "data": "muhammadarizals1@gmail.com",
-      "verified": falsecl
-    },
-    "followers": 0,
-    "follow_you":false
-  }
+    "error": false,
+    "data": {
+        "_id": "59c63a5fe0bc2400117a87fc",
+        "updatedAt": "2018-02-20T15:03:44.705Z",
+        "createdAt": "2017-09-23T10:41:35.643Z",
+        "name": "Open Trip Official",
+        "rating": {
+            "point": 5,
+            "count": 2
+        },
+        "point": 0,
+        "interest": [
+            "Traveling",
+            " Networking",
+            " Having Fun"
+        ],
+        "gender": 1,
+        "block": 0,
+        "hide_post": [],
+        "following": 9,
+        "email": {
+            "data": "hello@opentripapp.com",
+            "verified": false
+        },
+        "__v": 1,
+        "phone_number": {
+            "data": "08118808877",
+            "verified": true
+        },
+        "profile_picture": "https://s3-ap-southeast-1.amazonaws.com/opentrip-media/59c63a5fe0bc2400117a87fc_81bba8be06307fce.jpg",
+        "profile_cover": "https://s3-ap-southeast-1.amazonaws.com/opentrip-media/59c63a5fe0bc2400117a87fc_ae020d420134dcf2.jpg",
+        "address": "Bandung",
+        "birth_date": "2017-03-04T00:00:00.000Z",
+        "bio": "Make Friends Along the Way",
+        "verified": false,
+        "status": {
+            "last_active": "2018-02-20T15:03:44.704Z",
+            "online": false
+        },
+        "follow_you": false,
+        "is_follow": true,
+        "followers": 5,
+        "open_trips": 1
+    }
 }
 ```
 
@@ -125,43 +154,77 @@ Parameter | Required | Description
 id | true | user id `_id`
 
 
-
-
 ## Update User Profile
+
+```shell
+curl -X PUT \
+  https://api.opentripapp.com/user/update \
+  -H 'accept-language: en' \
+  -H 'api-client: android' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'device-id: 123' \
+  -H 'Authorization: Bearer TOKEN'
+  -H 'x-api-key: YOUR_API_KEY' \
+  -d '{
+    "name":"lala"
+  }'
+```
+
 
 > Result
 
 ```json
 {
-  "error": false,
-  "data": {
-    "_id": "59239a99feb15e3830fd8813",
-    "updatedAt": "2017-05-23T02:47:28.727Z",
-    "createdAt": "2017-05-23T02:12:41.283Z",
-    "name": "njayen baru",
-    "address": "jl sukarn hatta bandung",
-    "bio": "Logi",
-    "birth_date": "1970-01-18T07:24:20.306Z",
-    "profile_cover": "cover bary",
-    "profile_picture": "url alamat profile picture baru",
-    "point": 0,
-    "interest": [
-      "apaya",
-      "ehh"
-    ],
-    "gender": 1,
-    "block": 0,
-    "following": 0,
-    "phone_number": {
-      "data": "14045",
-      "verified": false
-    },
-    "email": {
-      "data": "muhammadarizals2@gmail.com",
-      "verified": false
-    },
-    "followers": 0
-  }
+    "error": false,
+    "data": {
+        "_id": "59c5c89665a538001088798f",
+        "updatedAt": "2018-06-12T07:53:41.054Z",
+        "createdAt": "2017-09-23T02:36:06.225Z",
+        "name": "new arizal",
+        "rating": {
+            "point": 0,
+            "count": 0
+        },
+        "point": 28,
+        "interest": [],
+        "gender": 2,
+        "block": 0,
+        "hide_post": [],
+        "following": 7,
+        "email": {
+            "verified": true,
+            "data": "muhammadarizals1@gmail.com"
+        },
+        "phone_number": {
+            "verified": true,
+            "data": "085722244744"
+        },
+        "__v": 0,
+        "notification": {
+            "is_login": true
+        },
+        "profile_picture": "https://d25b0guxzp2dqx.cloudfront.net/images/large/59c5c89665a538001088798f_2bb6e8d9c44bbded.jpg",
+        "profile_cover": "https://s3-ap-southeast-1.amazonaws.com/opentrip-media/59c5c89665a538001088798f_701c6df0bcb6a571.jpg",
+        "identity_card": {
+            "data": "https://images3.alphacoders.com/823/82317.jpg",
+            "verified": false
+        },
+        "bio": "",
+        "birth_date": null,
+        "address": "",
+        "is_suspend": false,
+        "status": {
+            "last_active": "2018-02-20T14:56:52.704Z",
+            "online": false
+        },
+        "is_leader": true,
+        "verified": false,
+        "follow_you": false,
+        "is_follow": false,
+        "followers": 1,
+        "open_trips": 8
+    }
 }
 ```
 
@@ -181,7 +244,7 @@ Authorization | true | access_token | `Authorization: Bearer <access_token>`
 You must replace <code>access_token</code> with access_token.
 </aside>
 
-### Query Parameters
+### Body Parameters
 
 Parameter | Required | Description | Type
 --------- | ------- | -----------| -----------
@@ -219,6 +282,23 @@ When you updating phone number user will receive sms verification
 </aside>
 
 ## Upload Photo Profile
+
+```shell
+curl -X POST \
+  http://localhost:8005/media/upload/profile \
+   -H 'accept-language: en' \
+    -H 'api-client: android' \
+    -H 'cache-control: no-cache' \
+    -H 'content-type: application/json' \
+    -H 'device-id: 123' \
+    -H 'Authorization: Bearer TOKEN'
+    -H 'x-api-key: YOUR_API_KEY' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW' \
+  -H 'postman-token: 5d0a0e1d-3053-99d9-ca92-7a85d2e644db' \
+  -F file=@1470.jpg
+```
+
 > Success Result
 
 ```json
@@ -241,6 +321,22 @@ Parameter | Required | Description
 file | true | file of the image
 
 ## Upload Photo Cover
+```shell
+curl -X POST \
+  http://localhost:8005/media/upload/cover \
+   -H 'accept-language: en' \
+    -H 'api-client: android' \
+    -H 'cache-control: no-cache' \
+    -H 'content-type: application/json' \
+    -H 'device-id: 123' \
+    -H 'Authorization: Bearer TOKEN'
+    -H 'x-api-key: YOUR_API_KEY' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW' \
+  -H 'postman-token: 5d0a0e1d-3053-99d9-ca92-7a85d2e644db' \
+  -F file=@1470.jpg
+```
+
 > Result
 
 ```json

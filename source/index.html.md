@@ -2,7 +2,7 @@
 title: Open Trip API Reference
 
 language_tabs:
-  - json
+  - shell
 
 toc_footers:
   - <a href='https://developers.opentripapp.com/'>Sign Up for a Developer Key</a>

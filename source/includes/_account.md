@@ -2,29 +2,56 @@
 
 ## Register
 
+```shell
+curl -X POST \
+  https://api.opentripapp.com/user/register \
+  -H 'accept-language: en' \
+  -H 'api-client: android' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'device-id: 123' \
+  -H 'postman-token: 60b98299-e595-bbc0-9ace-9f1276fa618c' \
+  -H 'x-api-key: YOUR_API_KEY' \
+  -d '{
+  "name":"vita",
+  "password":"123456",
+  "email":"te2s@te2se3ed3e3d.coms",
+  "referral_code":"muhammadarizals1@gmail.com",
+  "referral_type":"email"
+}'
+```
+
 > Result
 
 ```json
 {
-  "error": false,
-  "data": {
-    "updatedAt": "2017-05-23T02:12:41.283Z",
-    "createdAt": "2017-05-23T02:12:41.283Z",
-    "name": "arizal",
-    "_id": "59239a99feb15e3830fd8813",
-    "point": 0,
-    "interest": [],
-    "gender": 2,
-    "block": 0,
-    "following": 0,
-    "email": {
-      "data": "tes@tes.com",
-      "verified": false
-    },
-    "followers": 0,
-    "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU5MjM5YTk5ZmViMTVlMzgzMGZkODgxMyIsInR5cGUiOiJhY2Nlc3NfdG9rZW4iLCJpYXQiOjE0OTU1MDU1NjEsImV4cCI6MTUwMDY4OTU2MX0.1ezJfr7oS525SZIk9cMAvIYcmypQiF9qHWvGWtQJsYk",
-    "refresh_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU5MjM5YTk5ZmViMTVlMzgzMGZkODgxMyIsInR5cGUiOiJyZWZyZXNoX3Rva2VuIiwiaWF0IjoxNDk1NTA1NTYxLCJleHAiOjE1MjcwNjMxNjF9.jVyoVDUNEF6UFcKkDrsLcmyzQhHGMr717btMnxEteJ4"
-  }
+    "error": false,
+    "data": {
+        "email": {
+            "data": "te2s@te2se3ed3e3d.coms",
+            "verified": false
+        },
+        "rating": {
+            "point": 0,
+            "count": 0
+        },
+        "following": 0,
+        "hide_post": [],
+        "block": 0,
+        "gender": 2,
+        "interest": [],
+        "point": 0,
+        "is_leader": false,
+        "verified": false,
+        "_id": "5b1f72af78391d0005c82705",
+        "name": "vita",
+        "referral_code": "TE2S890F",
+        "createdAt": "2018-06-12T07:13:51.843Z",
+        "updatedAt": "2018-06-12T07:13:51.843Z",
+        "__v": 0,
+        "followers": 0,
+        "access_token": "some access token"
+    }
 }
 ```
 
@@ -48,48 +75,81 @@ referral_type | optional | type of referral code `email` or `phone_number` defau
 Remember — a happy kitten is an authenticated kitten!
 </aside>
 
-## Login Manual
+## Login
+
+```shell
+curl -X POST \
+  https://api.opentripapp.com/user/login \
+  -H 'accept-language: en' \
+  -H 'api-client: android' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'device-id: 123' \
+  -H 'postman-token: 7adbf8df-461e-3400-6993-ef974dd65437' \
+  -H 'x-api-key: YOUR_API_KEY' \
+  -d '{
+  "password":"lala",
+  "email":"lala@gmail.com"
+}'
+```
 
 > Result
 
 ```json
 {
-  "error": false,
-  "data": {
-   "_id": "59239a99feb15e3830fd8813",
-       "updatedAt": "2017-05-23T02:15:21.075Z",
-       "createdAt": "2017-05-23T02:12:41.283Z",
-       "name": "njayen",
-       "address": "jalan jalan",
-       "bio": "Gas",
-       "birth_date": "1970-01-18T07:24:20.306Z",
-       "profile_cover": "api.arizalsaputro.net",
-       "profile_picture": "www.arizalsaputro.net",
-       "point": 0,
-       "interest": [
-         "apaya",
-         "ehh"
-       ],
-       "gender": 1,
-       "block": 0,
-       "following": 0,
-       "phone_number": {
-         "data": "08783666786",
-         "verified": false
-       },
-       "email": {
-         "data": "muhammadarizals1@gmail.com",
-         "verified": false
-       },
-       "followers": 0
-    "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU5MjFlNTI0NjUxOGJiMjlkODE1OTc3MSIsInR5cGUiOiJhY2Nlc3NfdG9rZW4iLCJpYXQiOjE0OTU0MjUzODgsImV4cCI6MTUwMDYwOTM4OH0.8AP4seI3HOCiJqP-2QXzr46MzpNkPca80lm1crgdV7A",
-    "refresh_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU5MjFlNTI0NjUxOGJiMjlkODE1OTc3MSIsInR5cGUiOiJyZWZyZXNoX3Rva2VuIiwiaWF0IjoxNDk1NDI1Mzg4LCJleHAiOjE1MjY5ODI5ODh9.CE2cKlVzuyzfduwl7OGC1JzzkRJni-ctPNn4ZhsqzV0"
-  }
+    "error": false,
+    "data": {
+        "email": {
+            "data": "myemail@email.com",
+            "verified": true
+        },
+        "phone_number": {
+            "data": "085722244745",
+            "key": "4789",
+            "verified": true
+        },
+        "identity_card": {
+            "verified": false,
+            "data": null
+        },
+        "notification": {
+            "is_login": true
+        },
+        "rating": {
+            "point": 0,
+            "count": 0
+        },
+        "status": {
+            "last_active": "2018-06-12T05:52:43.963Z",
+            "online": false
+        },
+        "following": 19,
+        "hide_post": [],
+        "block": 0,
+        "gender": 1,
+        "interest": [],
+        "point": 0,
+        "is_leader": false,
+        "verified": false,
+        "_id": "59c5c89665a538001088798f",
+        "updatedAt": "2018-06-12T05:52:43.963Z",
+        "createdAt": "2017-09-23T02:36:06.225Z",
+        "name": "arizal saputro",
+        "__v": 0,
+        "profile_picture": "https://s3-ap-southeast-1.amazonaws.com/opentrip-media-20f95100/media/59c5c89665a538001088798f_103a61372d1a1561.jpg",
+        "profile_cover": "https://s3-ap-southeast-1.amazonaws.com/opentrip-media/59c5c89665a538001088798f_701c6df0bcb6a571.jpg",
+        "birth_date": "2017-10-11T00:00:00.000Z",
+        "bio": "",
+        "address": "",
+        "is_suspend": false,
+        "referral_code": "1373K464M4FMF607K",
+        "access_token": "some access token",
+        "followers": 5
+    }
 }
 ```
 
 User login application with email and password.
-
 
 ### Endpoint
 
@@ -102,66 +162,23 @@ Parameter | Required | Description
 email | true | Email for identifier
 password | true | Password for identifier
 
-## Instagram Login
-
-> Result
-
-```json
-{
-  "error": false,
-  "data": {
-     "_id": "59239a99feb15e3830fd8813",
-    "updatedAt": "2017-05-23T02:15:21.075Z",
-    "createdAt": "2017-05-23T02:12:41.283Z",
-    "name": "njayen",
-    "address": "jalan jalan",
-    "bio": "Gas",
-    "birth_date": "1970-01-18T07:24:20.306Z",
-    "profile_cover": "api.arizalsaputro.net",
-    "profile_picture": "www.arizalsaputro.net",
-    "point": 0,
-    "interest": [
-      "apaya",
-      "ehh"
-    ],
-    "gender": 1,
-    "block": 0,
-    "following": 0,
-    "phone_number": {
-      "data": "08783666786",
-      "verified": false
-    },
-    "email": {
-      "data": "muhammadarizals1@gmail.com",
-      "verified": false
-    },
-    "followers": 0
-    "id_instagram": "1574083",
-    "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU5MjFlNWM0YjlmZmIyMmFjNGI1OGUzYyIsInR5cGUiOiJhY2Nlc3NfdG9rZW4iLCJpYXQiOjE0OTU0MjU3MzQsImV4cCI6MTUwMDYwOTczNH0.PV5me3Ljcy4EYjVk4pkRx97jyvFGmHFpM502qk-6rGA",
-    "refresh_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU5MjFlNWM0YjlmZmIyMmFjNGI1OGUzYyIsInR5cGUiOiJyZWZyZXNoX3Rva2VuIiwiaWF0IjoxNDk1NDI1NzM0LCJleHAiOjE1MjY5ODMzMzR9.r9KeRQ4Gp9mhb1Fk-DCpqfzgI4LmwM0lqFyOuwxltBE"
-  }
-}
-```
-
-User login application with instagram account.
-
-
-### Endpoint
-
-`POST /user/login_instagram`
-
-### Parameters
-
-Parameter | Required | Description
---------- | ---------| -----------
-access_token | true | user access_token by instagram account
-id | true | user id instagram account
-username | true | username instagram account
-profile_picture | false | user profile picture
-full_name | false | user full_name of instagram account
-
 
 ## Forget Password
+
+```shell
+curl -X POST \
+  https://api.opentripapp.com/user/forget_password \
+  -H 'accept-language: en' \
+  -H 'api-client: android' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'device-id: 123' \
+  -H 'postman-token: 0404599d-358f-e444-0273-4979738b255e' \
+  -H 'x-api-key: YOUR_API_KEY' \
+  -d '{
+	"email":"muhammadarizals1@gmail.com"
+}'
+```
 
 > Result
 
@@ -186,6 +203,22 @@ email | true | Registered email address
 
 ## Reset Password
 
+```shell
+curl -X POST \
+  https://api.opentripapp.com/user/reset_password \
+  -H 'accept-language: en' \
+  -H 'api-client: android' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'device-id: 123' \
+  -H 'postman-token: 0404599d-358f-e444-0273-4979738b255e' \
+  -H 'x-api-key: YOUR_API_KEY' \
+  -d '{
+      	"new_password":"pasiamo1",
+      	"key":"ULOGOHeRf7gdjuztEHTMBCPo70tsbWMvoncVVvSj"
+      }'
+```
+
 > Result
 
 ```json
@@ -209,6 +242,23 @@ new_password | true | new password
 
 
 ## Change Password
+
+```shell
+curl -X POST \
+  https://api.opentripapp.com/user/update/password \
+  -H 'accept-language: en' \
+  -H 'api-client: android' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'device-id: 123' \
+  -H 'Authorization: Bearer TOKEN'
+  -H 'postman-token: 0404599d-358f-e444-0273-4979738b255e' \
+  -H 'x-api-key: YOUR_API_KEY' \
+  -d '{
+      	"old_password":"pasiamo5",
+      	"new_password":"pasiamo1"
+      }'
+```
 
 > Result
 
@@ -244,6 +294,22 @@ new_password | true | user new password
 
 ## Verify Email
 
+```shell
+curl -X POST \
+  https://api.opentripapp.com/user/confirm_email \
+  -H 'accept-language: en' \
+  -H 'api-client: android' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'device-id: 123' \
+  -H 'postman-token: 0404599d-358f-e444-0273-4979738b255e' \
+  -H 'x-api-key: YOUR_API_KEY' \
+  -d '{
+      	"key":"Dic673RTTS4InOqsQrTwRn1qBTfWLufRdVXa7cJz"
+      }'
+```
+
+
 > Result
 
 ```json
@@ -275,6 +341,22 @@ key | true | Unique key from to verify email address
 
 ## Add Phone Number
 
+```shell
+curl -X POST \
+  https://api.opentripapp.com/user/update/password \
+  -H 'accept-language: en' \
+  -H 'api-client: android' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'device-id: 123' \
+  -H 'Authorization: Bearer TOKEN'
+  -H 'postman-token: 0404599d-358f-e444-0273-4979738b255e' \
+  -H 'x-api-key: YOUR_API_KEY' \
+  -d '{
+      	"phone_number":"0857222444444"
+      }'
+```
+
 > Result
 
 ```json
@@ -302,6 +384,19 @@ Parameter | Required | Description
 phone_number | true | phone number
 
 ## Resend OTP Code
+
+```shell
+curl -X POST \
+  https://api.opentripapp.com/user/update/password \
+  -H 'accept-language: en' \
+  -H 'api-client: android' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'device-id: 123' \
+  -H 'Authorization: Bearer TOKEN'
+  -H 'postman-token: 0404599d-358f-e444-0273-4979738b255e' \
+  -H 'x-api-key: YOUR_API_KEY' \
+```
 
 > Result
 
@@ -349,6 +444,21 @@ Authorization | true | access_token | `Authorization: Bearer <access_token>`
 
 ## Verify Phone Number
 
+```shell
+curl -X POST \
+  https://api.opentripapp.com/user/update/password \
+  -H 'accept-language: en' \
+  -H 'api-client: android' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'device-id: 123' \
+  -H 'Authorization: Bearer TOKEN'
+  -H 'postman-token: 0404599d-358f-e444-0273-4979738b255e' \
+  -H 'x-api-key: YOUR_API_KEY' \
+  -d '{
+      	"code":"1234"
+      }'
+```
 > Result
 
 ```json
@@ -383,83 +493,3 @@ Authorization | true | access_token | `Authorization: Bearer <access_token>`
 Parameter | Required | Description
 --------- | ---------| -----------
 code | true | phone number verification code
-
-## RefreshToken
-
-> Result
-
-```json
-{
-  "error": false,
-  "data": {
-    "_id": "5921e5246518bb29d8159771",
-    "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU5MjFlNTI0NjUxOGJiMjlkODE1OTc3MSIsInR5cGUiOiJhY2Nlc3NfdG9rZW4iLCJpYXQiOjE0OTU0Mjc4NDQsImV4cCI6MTUwMDYxMTg0NH0.BkdPTO-H2NnB-kWxxPTDLpclc9L7pa-h7TRAuCGLtUc",
-    "refresh_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU5MjFlNTI0NjUxOGJiMjlkODE1OTc3MSIsInR5cGUiOiJyZWZyZXNoX3Rva2VuIiwiaWF0IjoxNDk1NDI3ODQ0LCJleHAiOjE1MjY5ODU0NDR9.CRzb1_c2d536-bn-QG0JaDze5fAdyAHIwDcDT29R2eM"
-  }
-}
-```
-
-Get user access_token, use this then access_token was expired
-
-### Endpoint
-
-`GET /user/refresh_token`
-
-### Header
-
-Name | Required | Description | example
---------- | ---------| -----------| -------------
-Authorization | true | refresh_token | `Authorization: Bearer <refresh_token>`
-
-<aside class="notice">
-You must replace <code>refresh_token</code> with refresh_token.
-Remember! header is <code>refresh_token</code> , NOT <code>access_token</code>
-</aside>
-
-
-## Delete Account
-
-> Result
-
-```json
-{
-  "error": false,
-}
-```
-
-Deleting using account, password require for deleting account.account will deleted permanent.
-
-### Endpoint
-
-`DELETE /user/account`
-
-### Header
-
-Name | Required | Description | example
---------- | ---------| -----------| -------------
-Authorization | true | access_token | `Authorization: Bearer <access_token>`
-
-<aside class="notice">
-You must replace <code>access_token</code> with access_token.
-</aside>
-
-### Parameters
-
-Parameter | Required | Description
---------- | ---------| -----------
-password | true | user current password.
-reason_code | true | why delete account ?.
-
-### reason_code
-
-code | Description
----- | -----------
-1    | Trouble getting started
-2    | Created a second account
-3    | Privacy concerns
-4    | Want to remove something
-5    | Too busy/too distracting
-6    | Can't find people to follow
-7    | Too many ads
-something else | why ?
-
