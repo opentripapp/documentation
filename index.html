@@ -200,7 +200,7 @@
       <script src="javascripts/all.js"></script>
   </head>
 
-  <body class="index" data-languages="[&quot;json&quot;]">
+  <body class="index" data-languages="[&quot;shell&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -210,7 +210,7 @@
     <div class="tocify-wrapper">
       <img src="images/logo.png" alt="Logo" />
         <div class="lang-selector">
-              <a href="#" data-language-name="json">json</a>
+              <a href="#" data-language-name="shell">shell</a>
         </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
@@ -253,30 +253,54 @@ You must replace <code>your_key</code> with with your production or sandbox key.
           <h1 id="account">Account</h1>
 
 <h2 id="register">Register</h2>
-
+<pre class="highlight shell tab-shell"><code>curl -X POST <span class="se">\</span>
+  https://api.opentripapp.com/user/register <span class="se">\</span>
+  -H <span class="s1">'accept-language: en'</span> <span class="se">\</span>
+  -H <span class="s1">'api-client: android'</span> <span class="se">\</span>
+  -H <span class="s1">'cache-control: no-cache'</span> <span class="se">\</span>
+  -H <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
+  -H <span class="s1">'device-id: 123'</span> <span class="se">\</span>
+  -H <span class="s1">'postman-token: 60b98299-e595-bbc0-9ace-9f1276fa618c'</span> <span class="se">\</span>
+  -H <span class="s1">'x-api-key: YOUR_API_KEY'</span> <span class="se">\</span>
+  -d <span class="s1">'{
+  "name":"vita",
+  "password":"123456",
+  "email":"te2s@te2se3ed3e3d.coms",
+  "referral_code":"muhammadarizals1@gmail.com",
+  "referral_type":"email"
+}'</span>
+</code></pre>
 <blockquote>
 <p>Result</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-05-23T02:12:41.283Z"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-05-23T02:12:41.283Z"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"arizal"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"59239a99feb15e3830fd8813"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"point"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"interest"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
-    </span><span class="s2">"gender"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"block"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"following"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tes@tes.com"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"verified"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"followers"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"access_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU5MjM5YTk5ZmViMTVlMzgzMGZkODgxMyIsInR5cGUiOiJhY2Nlc3NfdG9rZW4iLCJpYXQiOjE0OTU1MDU1NjEsImV4cCI6MTUwMDY4OTU2MX0.1ezJfr7oS525SZIk9cMAvIYcmypQiF9qHWvGWtQJsYk"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"refresh_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU5MjM5YTk5ZmViMTVlMzgzMGZkODgxMyIsInR5cGUiOiJyZWZyZXNoX3Rva2VuIiwiaWF0IjoxNDk1NTA1NTYxLCJleHAiOjE1MjcwNjMxNjF9.jVyoVDUNEF6UFcKkDrsLcmyzQhHGMr717btMnxEteJ4"</span><span class="w">
-  </span><span class="p">}</span><span class="w">
+    </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"te2s@te2se3ed3e3d.coms"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"verified"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"rating"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"point"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"following"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"hide_post"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+        </span><span class="s2">"block"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"gender"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"interest"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+        </span><span class="s2">"point"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"is_leader"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"verified"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5b1f72af78391d0005c82705"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"vita"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"referral_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TE2S890F"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-06-12T07:13:51.843Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-06-12T07:13:51.843Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"__v"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"followers"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"access_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"some access token"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>Register a new user using email and password</p>
@@ -325,43 +349,74 @@ You must replace <code>your_key</code> with with your production or sandbox key.
 Remember — a happy kitten is an authenticated kitten!
 </aside>
 
-<h2 id="login-manual">Login Manual</h2>
-
+<h2 id="login">Login</h2>
+<pre class="highlight shell tab-shell"><code>curl -X POST <span class="se">\</span>
+  https://api.opentripapp.com/user/login <span class="se">\</span>
+  -H <span class="s1">'accept-language: en'</span> <span class="se">\</span>
+  -H <span class="s1">'api-client: android'</span> <span class="se">\</span>
+  -H <span class="s1">'cache-control: no-cache'</span> <span class="se">\</span>
+  -H <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
+  -H <span class="s1">'device-id: 123'</span> <span class="se">\</span>
+  -H <span class="s1">'postman-token: 7adbf8df-461e-3400-6993-ef974dd65437'</span> <span class="se">\</span>
+  -H <span class="s1">'x-api-key: YOUR_API_KEY'</span> <span class="se">\</span>
+  -d <span class="s1">'{
+  "password":"lala",
+  "email":"lala@gmail.com"
+}'</span>
+</code></pre>
 <blockquote>
 <p>Result</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-   </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"59239a99feb15e3830fd8813"</span><span class="p">,</span><span class="w">
-       </span><span class="s2">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-05-23T02:15:21.075Z"</span><span class="p">,</span><span class="w">
-       </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-05-23T02:12:41.283Z"</span><span class="p">,</span><span class="w">
-       </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"njayen"</span><span class="p">,</span><span class="w">
-       </span><span class="s2">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jalan jalan"</span><span class="p">,</span><span class="w">
-       </span><span class="s2">"bio"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Gas"</span><span class="p">,</span><span class="w">
-       </span><span class="s2">"birth_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1970-01-18T07:24:20.306Z"</span><span class="p">,</span><span class="w">
-       </span><span class="s2">"profile_cover"</span><span class="p">:</span><span class="w"> </span><span class="s2">"api.arizalsaputro.net"</span><span class="p">,</span><span class="w">
-       </span><span class="s2">"profile_picture"</span><span class="p">:</span><span class="w"> </span><span class="s2">"www.arizalsaputro.net"</span><span class="p">,</span><span class="w">
-       </span><span class="s2">"point"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-       </span><span class="s2">"interest"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-         </span><span class="s2">"apaya"</span><span class="p">,</span><span class="w">
-         </span><span class="s2">"ehh"</span><span class="w">
-       </span><span class="p">],</span><span class="w">
-       </span><span class="s2">"gender"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-       </span><span class="s2">"block"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-       </span><span class="s2">"following"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-       </span><span class="s2">"phone_number"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-         </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"08783666786"</span><span class="p">,</span><span class="w">
-         </span><span class="s2">"verified"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
-       </span><span class="p">},</span><span class="w">
-       </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-         </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"muhammadarizals1@gmail.com"</span><span class="p">,</span><span class="w">
-         </span><span class="s2">"verified"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
-       </span><span class="p">},</span><span class="w">
-       </span><span class="s2">"followers"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
-    </span><span class="s2">"access_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU5MjFlNTI0NjUxOGJiMjlkODE1OTc3MSIsInR5cGUiOiJhY2Nlc3NfdG9rZW4iLCJpYXQiOjE0OTU0MjUzODgsImV4cCI6MTUwMDYwOTM4OH0.8AP4seI3HOCiJqP-2QXzr46MzpNkPca80lm1crgdV7A"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"refresh_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU5MjFlNTI0NjUxOGJiMjlkODE1OTc3MSIsInR5cGUiOiJyZWZyZXNoX3Rva2VuIiwiaWF0IjoxNDk1NDI1Mzg4LCJleHAiOjE1MjY5ODI5ODh9.CE2cKlVzuyzfduwl7OGC1JzzkRJni-ctPNn4ZhsqzV0"</span><span class="w">
-  </span><span class="p">}</span><span class="w">
+    </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"myemail@email.com"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"verified"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"phone_number"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"085722244745"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4789"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"verified"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"identity_card"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"verified"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"notification"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"is_login"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"rating"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"point"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"last_active"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-06-12T05:52:43.963Z"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"online"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"following"</span><span class="p">:</span><span class="w"> </span><span class="mi">19</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"hide_post"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+        </span><span class="s2">"block"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"gender"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"interest"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+        </span><span class="s2">"point"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"is_leader"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"verified"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"59c5c89665a538001088798f"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-06-12T05:52:43.963Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-09-23T02:36:06.225Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"arizal saputro"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"__v"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"profile_picture"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://s3-ap-southeast-1.amazonaws.com/opentrip-media-20f95100/media/59c5c89665a538001088798f_103a61372d1a1561.jpg"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"profile_cover"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://s3-ap-southeast-1.amazonaws.com/opentrip-media/59c5c89665a538001088798f_701c6df0bcb6a571.jpg"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"birth_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-10-11T00:00:00.000Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"bio"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"is_suspend"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"referral_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1373K464M4FMF607K"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"access_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"some access token"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"followers"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="w">
+    </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>User login application with email and password.</p>
@@ -391,90 +446,20 @@ Remember — a happy kitten is an authenticated kitten!
 </tr>
 </tbody></table>
 
-<h2 id="instagram-login">Instagram Login</h2>
-
-<blockquote>
-<p>Result</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-     </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"59239a99feb15e3830fd8813"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-05-23T02:15:21.075Z"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-05-23T02:12:41.283Z"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"njayen"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jalan jalan"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"bio"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Gas"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"birth_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1970-01-18T07:24:20.306Z"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"profile_cover"</span><span class="p">:</span><span class="w"> </span><span class="s2">"api.arizalsaputro.net"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"profile_picture"</span><span class="p">:</span><span class="w"> </span><span class="s2">"www.arizalsaputro.net"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"point"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"interest"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-      </span><span class="s2">"apaya"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"ehh"</span><span class="w">
-    </span><span class="p">],</span><span class="w">
-    </span><span class="s2">"gender"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"block"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"following"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"phone_number"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"08783666786"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"verified"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"muhammadarizals1@gmail.com"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"verified"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"followers"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
-    </span><span class="s2">"id_instagram"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1574083"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"access_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU5MjFlNWM0YjlmZmIyMmFjNGI1OGUzYyIsInR5cGUiOiJhY2Nlc3NfdG9rZW4iLCJpYXQiOjE0OTU0MjU3MzQsImV4cCI6MTUwMDYwOTczNH0.PV5me3Ljcy4EYjVk4pkRx97jyvFGmHFpM502qk-6rGA"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"refresh_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU5MjFlNWM0YjlmZmIyMmFjNGI1OGUzYyIsInR5cGUiOiJyZWZyZXNoX3Rva2VuIiwiaWF0IjoxNDk1NDI1NzM0LCJleHAiOjE1MjY5ODMzMzR9.r9KeRQ4Gp9mhb1Fk-DCpqfzgI4LmwM0lqFyOuwxltBE"</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>User login application with instagram account.</p>
-
-<h3 id="endpoint">Endpoint</h3>
-
-<p><code class="prettyprint">POST /user/login_instagram</code></p>
-
-<h3 id="parameters">Parameters</h3>
-
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Required</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>access_token</td>
-<td>true</td>
-<td>user access_token by instagram account</td>
-</tr>
-<tr>
-<td>id</td>
-<td>true</td>
-<td>user id instagram account</td>
-</tr>
-<tr>
-<td>username</td>
-<td>true</td>
-<td>username instagram account</td>
-</tr>
-<tr>
-<td>profile_picture</td>
-<td>false</td>
-<td>user profile picture</td>
-</tr>
-<tr>
-<td>full_name</td>
-<td>false</td>
-<td>user full_name of instagram account</td>
-</tr>
-</tbody></table>
-
 <h2 id="forget-password">Forget Password</h2>
-
+<pre class="highlight shell tab-shell"><code>curl -X POST <span class="se">\</span>
+  https://api.opentripapp.com/user/forget_password <span class="se">\</span>
+  -H <span class="s1">'accept-language: en'</span> <span class="se">\</span>
+  -H <span class="s1">'api-client: android'</span> <span class="se">\</span>
+  -H <span class="s1">'cache-control: no-cache'</span> <span class="se">\</span>
+  -H <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
+  -H <span class="s1">'device-id: 123'</span> <span class="se">\</span>
+  -H <span class="s1">'postman-token: 0404599d-358f-e444-0273-4979738b255e'</span> <span class="se">\</span>
+  -H <span class="s1">'x-api-key: YOUR_API_KEY'</span> <span class="se">\</span>
+  -d <span class="s1">'{
+    "email":"muhammadarizals1@gmail.com"
+}'</span>
+</code></pre>
 <blockquote>
 <p>Result</p>
 </blockquote>
@@ -505,7 +490,20 @@ Remember — a happy kitten is an authenticated kitten!
 </tbody></table>
 
 <h2 id="reset-password">Reset Password</h2>
-
+<pre class="highlight shell tab-shell"><code>curl -X POST <span class="se">\</span>
+  https://api.opentripapp.com/user/reset_password <span class="se">\</span>
+  -H <span class="s1">'accept-language: en'</span> <span class="se">\</span>
+  -H <span class="s1">'api-client: android'</span> <span class="se">\</span>
+  -H <span class="s1">'cache-control: no-cache'</span> <span class="se">\</span>
+  -H <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
+  -H <span class="s1">'device-id: 123'</span> <span class="se">\</span>
+  -H <span class="s1">'postman-token: 0404599d-358f-e444-0273-4979738b255e'</span> <span class="se">\</span>
+  -H <span class="s1">'x-api-key: YOUR_API_KEY'</span> <span class="se">\</span>
+  -d <span class="s1">'{
+        "new_password":"pasiamo1",
+        "key":"ULOGOHeRf7gdjuztEHTMBCPo70tsbWMvoncVVvSj"
+      }'</span>
+</code></pre>
 <blockquote>
 <p>Result</p>
 </blockquote>
@@ -541,7 +539,21 @@ Remember — a happy kitten is an authenticated kitten!
 </tbody></table>
 
 <h2 id="change-password">Change Password</h2>
-
+<pre class="highlight shell tab-shell"><code>curl -X POST <span class="se">\</span>
+  https://api.opentripapp.com/user/update/password <span class="se">\</span>
+  -H <span class="s1">'accept-language: en'</span> <span class="se">\</span>
+  -H <span class="s1">'api-client: android'</span> <span class="se">\</span>
+  -H <span class="s1">'cache-control: no-cache'</span> <span class="se">\</span>
+  -H <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
+  -H <span class="s1">'device-id: 123'</span> <span class="se">\</span>
+  -H <span class="s1">'Authorization: Bearer TOKEN'</span>
+  -H <span class="s1">'postman-token: 0404599d-358f-e444-0273-4979738b255e'</span> <span class="se">\</span>
+  -H <span class="s1">'x-api-key: YOUR_API_KEY'</span> <span class="se">\</span>
+  -d <span class="s1">'{
+        "old_password":"pasiamo5",
+        "new_password":"pasiamo1"
+      }'</span>
+</code></pre>
 <blockquote>
 <p>Result</p>
 </blockquote>
@@ -599,7 +611,19 @@ You must replace <code>access_token</code> with access_token.
 </tbody></table>
 
 <h2 id="verify-email">Verify Email</h2>
-
+<pre class="highlight shell tab-shell"><code>curl -X POST <span class="se">\</span>
+  https://api.opentripapp.com/user/confirm_email <span class="se">\</span>
+  -H <span class="s1">'accept-language: en'</span> <span class="se">\</span>
+  -H <span class="s1">'api-client: android'</span> <span class="se">\</span>
+  -H <span class="s1">'cache-control: no-cache'</span> <span class="se">\</span>
+  -H <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
+  -H <span class="s1">'device-id: 123'</span> <span class="se">\</span>
+  -H <span class="s1">'postman-token: 0404599d-358f-e444-0273-4979738b255e'</span> <span class="se">\</span>
+  -H <span class="s1">'x-api-key: YOUR_API_KEY'</span> <span class="se">\</span>
+  -d <span class="s1">'{
+        "key":"Dic673RTTS4InOqsQrTwRn1qBTfWLufRdVXa7cJz"
+      }'</span>
+</code></pre>
 <blockquote>
 <p>Result</p>
 </blockquote>
@@ -638,7 +662,20 @@ You must replace <code>access_token</code> with access_token.
 </tbody></table>
 
 <h2 id="add-phone-number">Add Phone Number</h2>
-
+<pre class="highlight shell tab-shell"><code>curl -X POST <span class="se">\</span>
+  https://api.opentripapp.com/user/update/password <span class="se">\</span>
+  -H <span class="s1">'accept-language: en'</span> <span class="se">\</span>
+  -H <span class="s1">'api-client: android'</span> <span class="se">\</span>
+  -H <span class="s1">'cache-control: no-cache'</span> <span class="se">\</span>
+  -H <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
+  -H <span class="s1">'device-id: 123'</span> <span class="se">\</span>
+  -H <span class="s1">'Authorization: Bearer TOKEN'</span>
+  -H <span class="s1">'postman-token: 0404599d-358f-e444-0273-4979738b255e'</span> <span class="se">\</span>
+  -H <span class="s1">'x-api-key: YOUR_API_KEY'</span> <span class="se">\</span>
+  -d <span class="s1">'{
+        "phone_number":"0857222444444"
+      }'</span>
+</code></pre>
 <blockquote>
 <p>Result</p>
 </blockquote>
@@ -687,7 +724,17 @@ You must replace <code>access_token</code> with access_token.
 </tbody></table>
 
 <h2 id="resend-otp-code">Resend OTP Code</h2>
-
+<pre class="highlight shell tab-shell"><code>curl -X POST <span class="se">\</span>
+  https://api.opentripapp.com/user/update/password <span class="se">\</span>
+  -H <span class="s1">'accept-language: en'</span> <span class="se">\</span>
+  -H <span class="s1">'api-client: android'</span> <span class="se">\</span>
+  -H <span class="s1">'cache-control: no-cache'</span> <span class="se">\</span>
+  -H <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
+  -H <span class="s1">'device-id: 123'</span> <span class="se">\</span>
+  -H <span class="s1">'Authorization: Bearer TOKEN'</span>
+  -H <span class="s1">'postman-token: 0404599d-358f-e444-0273-4979738b255e'</span> <span class="se">\</span>
+  -H <span class="s1">'x-api-key: YOUR_API_KEY'</span> <span class="se">\</span>
+</code></pre>
 <blockquote>
 <p>Result</p>
 </blockquote>
@@ -753,7 +800,20 @@ You must replace <code>access_token</code> with access_token.
 </tbody></table>
 
 <h2 id="verify-phone-number">Verify Phone Number</h2>
-
+<pre class="highlight shell tab-shell"><code>curl -X POST <span class="se">\</span>
+  https://api.opentripapp.com/user/update/password <span class="se">\</span>
+  -H <span class="s1">'accept-language: en'</span> <span class="se">\</span>
+  -H <span class="s1">'api-client: android'</span> <span class="se">\</span>
+  -H <span class="s1">'cache-control: no-cache'</span> <span class="se">\</span>
+  -H <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
+  -H <span class="s1">'device-id: 123'</span> <span class="se">\</span>
+  -H <span class="s1">'Authorization: Bearer TOKEN'</span>
+  -H <span class="s1">'postman-token: 0404599d-358f-e444-0273-4979738b255e'</span> <span class="se">\</span>
+  -H <span class="s1">'x-api-key: YOUR_API_KEY'</span> <span class="se">\</span>
+  -d <span class="s1">'{
+        "code":"1234"
+      }'</span>
+</code></pre>
 <blockquote>
 <p>Result</p>
 </blockquote>
@@ -809,219 +869,67 @@ You must replace <code>access_token</code> with access_token.
 </tr>
 </tbody></table>
 
-<h2 id="refreshtoken">RefreshToken</h2>
-
-<blockquote>
-<p>Result</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5921e5246518bb29d8159771"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"access_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU5MjFlNTI0NjUxOGJiMjlkODE1OTc3MSIsInR5cGUiOiJhY2Nlc3NfdG9rZW4iLCJpYXQiOjE0OTU0Mjc4NDQsImV4cCI6MTUwMDYxMTg0NH0.BkdPTO-H2NnB-kWxxPTDLpclc9L7pa-h7TRAuCGLtUc"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"refresh_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU5MjFlNTI0NjUxOGJiMjlkODE1OTc3MSIsInR5cGUiOiJyZWZyZXNoX3Rva2VuIiwiaWF0IjoxNDk1NDI3ODQ0LCJleHAiOjE1MjY5ODU0NDR9.CRzb1_c2d536-bn-QG0JaDze5fAdyAHIwDcDT29R2eM"</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>Get user access_token, use this then access_token was expired</p>
-
-<h3 id="endpoint">Endpoint</h3>
-
-<p><code class="prettyprint">GET /user/refresh_token</code></p>
-
-<h3 id="header">Header</h3>
-
-<table><thead>
-<tr>
-<th>Name</th>
-<th>Required</th>
-<th>Description</th>
-<th>example</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Authorization</td>
-<td>true</td>
-<td>refresh_token</td>
-<td><code class="prettyprint">Authorization: Bearer &lt;refresh_token&gt;</code></td>
-</tr>
-</tbody></table>
-
-<aside class="notice">
-You must replace <code>refresh_token</code> with refresh_token.
-Remember! header is <code>refresh_token</code> , NOT <code>access_token</code>
-</aside>
-
-<h2 id="delete-account">Delete Account</h2>
-
-<blockquote>
-<p>Result</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>Deleting using account, password require for deleting account.account will deleted permanent.</p>
-
-<h3 id="endpoint">Endpoint</h3>
-
-<p><code class="prettyprint">DELETE /user/account</code></p>
-
-<h3 id="header">Header</h3>
-
-<table><thead>
-<tr>
-<th>Name</th>
-<th>Required</th>
-<th>Description</th>
-<th>example</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Authorization</td>
-<td>true</td>
-<td>access_token</td>
-<td><code class="prettyprint">Authorization: Bearer &lt;access_token&gt;</code></td>
-</tr>
-</tbody></table>
-
-<aside class="notice">
-You must replace <code>access_token</code> with access_token.
-</aside>
-
-<h3 id="parameters">Parameters</h3>
-
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Required</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>password</td>
-<td>true</td>
-<td>user current password.</td>
-</tr>
-<tr>
-<td>reason_code</td>
-<td>true</td>
-<td>why delete account ?.</td>
-</tr>
-</tbody></table>
-
-<h3 id="reason_code">reason_code</h3>
-
-<table><thead>
-<tr>
-<th>code</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>1</td>
-<td>Trouble getting started</td>
-</tr>
-<tr>
-<td>2</td>
-<td>Created a second account</td>
-</tr>
-<tr>
-<td>3</td>
-<td>Privacy concerns</td>
-</tr>
-<tr>
-<td>4</td>
-<td>Want to remove something</td>
-</tr>
-<tr>
-<td>5</td>
-<td>Too busy/too distracting</td>
-</tr>
-<tr>
-<td>6</td>
-<td>Can&rsquo;t find people to follow</td>
-</tr>
-<tr>
-<td>7</td>
-<td>Too many ads</td>
-</tr>
-<tr>
-<td>something else</td>
-<td>why ?</td>
-</tr>
-</tbody></table>
-
           <h1 id="profile">Profile</h1>
 
-<h2 id="upload-device-token">Upload Device Token</h2>
-
-<blockquote>
-<p>Success Result</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<h3 id="endpoint">Endpoint</h3>
-
-<p>to update user device fcm token, to send push notification.</p>
-
-<p><code class="prettyprint">PUT /user/update/token</code></p>
-
-<h3 id="query-parameters">Query Parameters</h3>
-
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Required</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>device_token</td>
-<td>true</td>
-<td>device generated token for fcm</td>
-</tr>
-</tbody></table>
-
 <h2 id="get-user-profile">Get User Profile</h2>
-
+<pre class="highlight shell tab-shell"><code>curl -X GET <span class="se">\</span>
+  https://api.opentripapp.com/user/profile?id<span class="o">=</span>59c63a5fe0bc2400117a87fc <span class="se">\</span>
+  -H <span class="s1">'accept-language: en'</span> <span class="se">\</span>
+  -H <span class="s1">'api-client: android'</span> <span class="se">\</span>
+  -H <span class="s1">'cache-control: no-cache'</span> <span class="se">\</span>
+  -H <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
+  -H <span class="s1">'device-id: 123'</span> <span class="se">\</span>
+  -H <span class="s1">'Authorization: Bearer TOKEN'</span>
+  -H <span class="s1">'x-api-key: YOUR_API_KEY'</span> <span class="se">\</span>
+</code></pre>
 <blockquote>
 <p>Result</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"59239a99feb15e3830fd8813"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-05-23T02:15:21.075Z"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-05-23T02:12:41.283Z"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"njayen"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"referral_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1906QR75766570615"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jalan jalan"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"bio"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Gas"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"birth_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1970-01-18T07:24:20.306Z"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"profile_cover"</span><span class="p">:</span><span class="w"> </span><span class="s2">"url alamat cover"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"profile_picture"</span><span class="p">:</span><span class="w"> </span><span class="s2">"url alamat cover"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"point"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"interest"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-      </span><span class="s2">"apaya"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"ehh"</span><span class="w">
-    </span><span class="p">],</span><span class="w">
-    </span><span class="s2">"gender"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"block"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"following"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"phone_number"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"08783666786"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"verified"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"muhammadarizals1@gmail.com"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"verified"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"followers"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"follow_you"</span><span class="p">:</span><span class="kc">false</span><span class="w">
-  </span><span class="p">}</span><span class="w">
+    </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"59c63a5fe0bc2400117a87fc"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-20T15:03:44.705Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-09-23T10:41:35.643Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Open Trip Official"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"rating"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"point"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"point"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"interest"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">"Traveling"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">" Networking"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">" Having Fun"</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="s2">"gender"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"block"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"hide_post"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+        </span><span class="s2">"following"</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hello@opentripapp.com"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"verified"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"__v"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"phone_number"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"08118808877"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"verified"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"profile_picture"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://s3-ap-southeast-1.amazonaws.com/opentrip-media/59c63a5fe0bc2400117a87fc_81bba8be06307fce.jpg"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"profile_cover"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://s3-ap-southeast-1.amazonaws.com/opentrip-media/59c63a5fe0bc2400117a87fc_ae020d420134dcf2.jpg"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bandung"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"birth_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-03-04T00:00:00.000Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"bio"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Make Friends Along the Way"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"verified"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"last_active"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-20T15:03:44.704Z"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"online"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"follow_you"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"is_follow"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"followers"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"open_trips"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+    </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>Get user data profile by id</p>
@@ -1047,42 +955,63 @@ You must replace <code>access_token</code> with access_token.
 </tbody></table>
 
 <h2 id="get-other-user-profile-withour-auth">Get Other User Profile (Withour Auth)</h2>
-
+<pre class="highlight shell tab-shell"><code>curl -X GET <span class="se">\</span>
+  https://api.opentripapp.com/user/other_profile?id<span class="o">=</span>59c63a5fe0bc2400117a87fc <span class="se">\</span>
+  -H <span class="s1">'accept-language: en'</span> <span class="se">\</span>
+  -H <span class="s1">'api-client: android'</span> <span class="se">\</span>
+  -H <span class="s1">'cache-control: no-cache'</span> <span class="se">\</span>
+  -H <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
+  -H <span class="s1">'device-id: 123'</span> <span class="se">\</span>
+  -H <span class="s1">'x-api-key: YOUR_API_KEY'</span> <span class="se">\</span>
+</code></pre>
 <blockquote>
 <p>Result</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"59239a99feb15e3830fd8813"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-05-23T02:15:21.075Z"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-05-23T02:12:41.283Z"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"njayen"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"referral_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1906QR75766570615"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jalan jalan"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"bio"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Gas"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"birth_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1970-01-18T07:24:20.306Z"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"profile_cover"</span><span class="p">:</span><span class="w"> </span><span class="s2">"url alamat cover"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"profile_picture"</span><span class="p">:</span><span class="w"> </span><span class="s2">"url alamat cover"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"point"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"interest"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-      </span><span class="s2">"apaya"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"ehh"</span><span class="w">
-    </span><span class="p">],</span><span class="w">
-    </span><span class="s2">"gender"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"block"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"following"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"phone_number"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"08783666786"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"verified"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"muhammadarizals1@gmail.com"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"verified"</span><span class="p">:</span><span class="w"> </span><span class="err">falsecl</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"followers"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"follow_you"</span><span class="p">:</span><span class="kc">false</span><span class="w">
-  </span><span class="p">}</span><span class="w">
+    </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"59c63a5fe0bc2400117a87fc"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-20T15:03:44.705Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-09-23T10:41:35.643Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Open Trip Official"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"rating"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"point"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"point"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"interest"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">"Traveling"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">" Networking"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">" Having Fun"</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="s2">"gender"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"block"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"hide_post"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+        </span><span class="s2">"following"</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hello@opentripapp.com"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"verified"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"__v"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"phone_number"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"08118808877"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"verified"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"profile_picture"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://s3-ap-southeast-1.amazonaws.com/opentrip-media/59c63a5fe0bc2400117a87fc_81bba8be06307fce.jpg"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"profile_cover"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://s3-ap-southeast-1.amazonaws.com/opentrip-media/59c63a5fe0bc2400117a87fc_ae020d420134dcf2.jpg"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bandung"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"birth_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-03-04T00:00:00.000Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"bio"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Make Friends Along the Way"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"verified"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"last_active"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-20T15:03:44.704Z"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"online"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"follow_you"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"is_follow"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"followers"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"open_trips"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+    </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>Get user data profile by id without authentication</p>
@@ -1108,40 +1037,72 @@ You must replace <code>access_token</code> with access_token.
 </tbody></table>
 
 <h2 id="update-user-profile">Update User Profile</h2>
-
+<pre class="highlight shell tab-shell"><code>curl -X PUT <span class="se">\</span>
+  https://api.opentripapp.com/user/update <span class="se">\</span>
+  -H <span class="s1">'accept-language: en'</span> <span class="se">\</span>
+  -H <span class="s1">'api-client: android'</span> <span class="se">\</span>
+  -H <span class="s1">'cache-control: no-cache'</span> <span class="se">\</span>
+  -H <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
+  -H <span class="s1">'device-id: 123'</span> <span class="se">\</span>
+  -H <span class="s1">'Authorization: Bearer TOKEN'</span>
+  -H <span class="s1">'x-api-key: YOUR_API_KEY'</span> <span class="se">\</span>
+  -d <span class="s1">'{
+    "name":"lala"
+  }'</span>
+</code></pre>
 <blockquote>
 <p>Result</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"59239a99feb15e3830fd8813"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-05-23T02:47:28.727Z"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-05-23T02:12:41.283Z"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"njayen baru"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jl sukarn hatta bandung"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"bio"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Logi"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"birth_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1970-01-18T07:24:20.306Z"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"profile_cover"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cover bary"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"profile_picture"</span><span class="p">:</span><span class="w"> </span><span class="s2">"url alamat profile picture baru"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"point"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"interest"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-      </span><span class="s2">"apaya"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"ehh"</span><span class="w">
-    </span><span class="p">],</span><span class="w">
-    </span><span class="s2">"gender"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"block"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"following"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"phone_number"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"14045"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"verified"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"muhammadarizals2@gmail.com"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"verified"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"followers"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
-  </span><span class="p">}</span><span class="w">
+    </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"59c5c89665a538001088798f"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-06-12T07:53:41.054Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-09-23T02:36:06.225Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"new arizal"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"rating"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"point"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"point"</span><span class="p">:</span><span class="w"> </span><span class="mi">28</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"interest"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+        </span><span class="s2">"gender"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"block"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"hide_post"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+        </span><span class="s2">"following"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"verified"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"muhammadarizals1@gmail.com"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"phone_number"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"verified"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"085722244744"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"__v"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"notification"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"is_login"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"profile_picture"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://d25b0guxzp2dqx.cloudfront.net/images/large/59c5c89665a538001088798f_2bb6e8d9c44bbded.jpg"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"profile_cover"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://s3-ap-southeast-1.amazonaws.com/opentrip-media/59c5c89665a538001088798f_701c6df0bcb6a571.jpg"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"identity_card"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://images3.alphacoders.com/823/82317.jpg"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"verified"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"bio"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"birth_date"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"is_suspend"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"last_active"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-20T14:56:52.704Z"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"online"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"is_leader"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"verified"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"follow_you"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"is_follow"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"followers"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"open_trips"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="w">
+    </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>You can update user profile using this endpoint.</p>
@@ -1172,7 +1133,7 @@ You must replace <code>access_token</code> with access_token.
 You must replace <code>access_token</code> with access_token.
 </aside>
 
-<h3 id="query-parameters">Query Parameters</h3>
+<h3 id="body-parameters">Body Parameters</h3>
 
 <table><thead>
 <tr>
@@ -1276,7 +1237,20 @@ When you updating phone number user will receive sms verification
 </aside>
 
 <h2 id="upload-photo-profile">Upload Photo Profile</h2>
-
+<pre class="highlight shell tab-shell"><code>curl -X POST <span class="se">\</span>
+  http://localhost:8005/media/upload/profile <span class="se">\</span>
+   -H <span class="s1">'accept-language: en'</span> <span class="se">\</span>
+    -H <span class="s1">'api-client: android'</span> <span class="se">\</span>
+    -H <span class="s1">'cache-control: no-cache'</span> <span class="se">\</span>
+    -H <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
+    -H <span class="s1">'device-id: 123'</span> <span class="se">\</span>
+    -H <span class="s1">'Authorization: Bearer TOKEN'</span>
+    -H <span class="s1">'x-api-key: YOUR_API_KEY'</span> <span class="se">\</span>
+  -H <span class="s1">'cache-control: no-cache'</span> <span class="se">\</span>
+  -H <span class="s1">'content-type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW'</span> <span class="se">\</span>
+  -H <span class="s1">'postman-token: 5d0a0e1d-3053-99d9-ca92-7a85d2e644db'</span> <span class="se">\</span>
+  -F <span class="nv">file</span><span class="o">=</span>@1470.jpg
+</code></pre>
 <blockquote>
 <p>Success Result</p>
 </blockquote>
@@ -1310,7 +1284,20 @@ When you updating phone number user will receive sms verification
 </tbody></table>
 
 <h2 id="upload-photo-cover">Upload Photo Cover</h2>
-
+<pre class="highlight shell tab-shell"><code>curl -X POST <span class="se">\</span>
+  http://localhost:8005/media/upload/cover <span class="se">\</span>
+   -H <span class="s1">'accept-language: en'</span> <span class="se">\</span>
+    -H <span class="s1">'api-client: android'</span> <span class="se">\</span>
+    -H <span class="s1">'cache-control: no-cache'</span> <span class="se">\</span>
+    -H <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
+    -H <span class="s1">'device-id: 123'</span> <span class="se">\</span>
+    -H <span class="s1">'Authorization: Bearer TOKEN'</span>
+    -H <span class="s1">'x-api-key: YOUR_API_KEY'</span> <span class="se">\</span>
+  -H <span class="s1">'cache-control: no-cache'</span> <span class="se">\</span>
+  -H <span class="s1">'content-type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW'</span> <span class="se">\</span>
+  -H <span class="s1">'postman-token: 5d0a0e1d-3053-99d9-ca92-7a85d2e644db'</span> <span class="se">\</span>
+  -F <span class="nv">file</span><span class="o">=</span>@1470.jpg
+</code></pre>
 <blockquote>
 <p>Result</p>
 </blockquote>
@@ -1431,7 +1418,18 @@ When you updating phone number user will receive sms verification
           <h1 id="notification">Notification</h1>
 
 <h2 id="add-device">Add Device</h2>
-
+<pre class="highlight shell tab-shell"><code>curl -X POST <span class="se">\</span>
+  http://localhost:8000/add_token <span class="se">\</span>
+  -H <span class="s1">'cache-control: no-cache'</span> <span class="se">\</span>
+  -H <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
+  -H <span class="s1">'postman-token: 0195ba7b-9f4a-bef6-2cdd-d324293dd165'</span> <span class="se">\</span>
+  -H <span class="s1">'user-id: 59c5c89665a538001088798f'</span> <span class="se">\</span>
+  -d <span class="s1">'{
+    "device_id":"123",
+    "client_token":"12212121212121asdlaskm3",
+    "client_agent":"etc"
+}'</span>
+</code></pre>
 <blockquote>
 <p>Success Result</p>
 </blockquote>
@@ -1439,13 +1437,13 @@ When you updating phone number user will receive sms verification
     </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>add user FCM Token</p>
+<p>add user player id (oneSignal)</p>
 
 <h3 id="endpoint">Endpoint</h3>
 
-<p><code class="prettyprint">POST /notifications/add_device</code></p>
+<p><code class="prettyprint">POST /notifications/add_token</code></p>
 
-<h3 id="query-parameters">Query Parameters</h3>
+<h3 id="body-parameters">Body Parameters</h3>
 
 <table><thead>
 <tr>
@@ -1455,14 +1453,30 @@ When you updating phone number user will receive sms verification
 </tr>
 </thead><tbody>
 <tr>
-<td>device_token</td>
+<td>device_id</td>
 <td>true</td>
-<td>device generated token for fcm</td>
+<td>unique device id</td>
+</tr>
+<tr>
+<td>client_token</td>
+<td>true</td>
+<td>players id from onesignal</td>
+</tr>
+<tr>
+<td>client_agent</td>
+<td>true</td>
+<td>device type, android,ios,or web</td>
 </tr>
 </tbody></table>
 
 <h2 id="log-out">Log Out</h2>
-
+<pre class="highlight shell tab-shell"><code>curl -X DELETE <span class="se">\</span>
+  <span class="s1">'http://localhost:8000/logout?device_id=123&amp;client_agent=etc'</span> <span class="se">\</span>
+  -H <span class="s1">'cache-control: no-cache'</span> <span class="se">\</span>
+  -H <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
+  -H <span class="s1">'postman-token: ece90638-64e3-7e8c-2829-78b4a285af0e'</span> <span class="se">\</span>
+  -H <span class="s1">'user-id: 59c5c89665a538001088798f'</span>
+</code></pre>
 <blockquote>
 <p>Success Result</p>
 </blockquote>
@@ -1474,25 +1488,46 @@ When you updating phone number user will receive sms verification
 
 <h3 id="endpoint">Endpoint</h3>
 
-<p><code class="prettyprint">POST /notifications/logout</code></p>
+<p><code class="prettyprint">DELETE /notifications/logout</code></p>
 
-<h2 id="get-unread-notifications">Get Unread Notifications</h2>
+<h3 id="query-parameters">Query Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>device_id</td>
+<td>true</td>
+<td>unique device id</td>
+</tr>
+<tr>
+<td>client_agent</td>
+<td>true</td>
+<td>device type, android,ios,or web</td>
+</tr>
+</tbody></table>
+
+<h2 id="get-notifications-config">Get Notifications Config</h2>
 
 <blockquote>
 <p>Success Result</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"data"</span><span class="p">:{</span><span class="w">
-        </span><span class="s2">"count"</span><span class="p">:</span><span class="mi">2</span><span class="w">
-    </span><span class="p">}</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"unread_notification"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>get unread notifications</p>
 
 <h3 id="endpoint">Endpoint</h3>
 
-<p><code class="prettyprint">GET /notifications/unreads</code></p>
+<p><code class="prettyprint">GET /notifications/config</code></p>
 
 <h2 id="set-notification-as-read">Set Notification as Read</h2>
 
@@ -1507,7 +1542,7 @@ When you updating phone number user will receive sms verification
 
 <h3 id="endpoint">Endpoint</h3>
 
-<p><code class="prettyprint">PUT /notifications</code></p>
+<p><code class="prettyprint">POST /notifications/set_read</code></p>
 
 <h2 id="set-a-notification-as-read">Set A Notification as Read</h2>
 
@@ -1522,43 +1557,10 @@ When you updating phone number user will receive sms verification
 
 <h3 id="endpoint">Endpoint</h3>
 
-<p><code class="prettyprint">PUT /notifications/::notification_id</code></p>
+<p><code class="prettyprint">POST /notifications/set_read/:notification_id</code></p>
 
 <h2 id="get-list-of-notification">Get List of Notification</h2>
 
-<blockquote>
-<p>Success Result</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"data"</span><span class="p">:[</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"type"</span><span class="p">:</span><span class="s2">"trip_full"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"message"</span><span class="p">:</span><span class="s2">"your trip is full"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"data"</span><span class="p">:</span><span class="s2">"trip id"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"read"</span><span class="p">:</span><span class="kc">false</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-         </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"type"</span><span class="p">:</span><span class="s2">"join_trip"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"message"</span><span class="p">:</span><span class="s2">"andika join your trip"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"data"</span><span class="p">:</span><span class="s2">"trip id misalnya"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"read"</span><span class="p">:</span><span class="kc">false</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"type"</span><span class="p">:</span><span class="s2">"join_trip"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"message"</span><span class="p">:</span><span class="s2">"andika join your trip"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"data"</span><span class="p">:</span><span class="s2">"user id misalnya"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"read"</span><span class="p">:</span><span class="kc">false</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"type"</span><span class="p">:</span><span class="s2">"upcoming_trip"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"message"</span><span class="p">:</span><span class="s2">"upcoming trip pada tanggal"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"data"</span><span class="p">:</span><span class="s2">"user id misalnya"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"read"</span><span class="p">:</span><span class="kc">false</span><span class="w">
-        </span><span class="p">}</span><span class="w">
-    </span><span class="p">]</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
 <p>get list of all notifications</p>
 
 <h3 id="endpoint">Endpoint</h3>
@@ -1575,11 +1577,6 @@ When you updating phone number user will receive sms verification
 </tr>
 </thead><tbody>
 <tr>
-<td>id</td>
-<td>true</td>
-<td>trip id</td>
-</tr>
-<tr>
 <td>offset</td>
 <td>false</td>
 <td><code class="prettyprint">0</code> default offset is <code class="prettyprint">0</code></td>
@@ -1589,7 +1586,42 @@ When you updating phone number user will receive sms verification
 <td>false</td>
 <td><code class="prettyprint">10</code> default limit is <code class="prettyprint">15</code></td>
 </tr>
+<tr>
+<td>is_read</td>
+<td>false</td>
+<td><code class="prettyprint">true</code> or <code class="prettyprint">false</code></td>
+</tr>
 </tbody></table>
+
+<h2 id="delete-a-notification">Delete A Notification</h2>
+
+<blockquote>
+<p>Success Result</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>delete single notifications</p>
+
+<h3 id="endpoint">Endpoint</h3>
+
+<p><code class="prettyprint">DELETE /notifications/delete/:notification_id</code></p>
+
+<h2 id="delete-notification">Delete Notification</h2>
+
+<blockquote>
+<p>Success Result</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>delete all notifications</p>
+
+<h3 id="endpoint">Endpoint</h3>
+
+<p><code class="prettyprint">DELETE /notifications/delete</code></p>
 
           <h1 id="social">Social</h1>
 
@@ -7751,7 +7783,7 @@ This is error handling
       </div>
       <div class="dark-box">
           <div class="lang-selector">
-                <a href="#" data-language-name="json">json</a>
+                <a href="#" data-language-name="shell">shell</a>
           </div>
       </div>
     </div>
