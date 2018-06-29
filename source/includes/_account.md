@@ -324,6 +324,40 @@ Parameter | Required | Description
 email | true | new user email address
 
 
+## Add Identity Card
+
+> Result
+
+```json
+{
+  "error": false
+}
+```
+
+Updating user identity card
+
+### Endpoint
+
+`POST /user/add_identity_card`
+
+### Header
+
+Name | Required | Description | example
+--------- | ---------| -----------| -------------
+Authorization | true | access_token | `Authorization: Bearer <access_token>`
+
+<aside class="notice">
+You must replace <code>access_token</code> with access_token.
+</aside>
+
+### Parameters
+
+Parameter | Required | Description
+--------- | ---------| -----------
+data | optional | user identity card url string   `https://s3.opentripapp.com/someimagesurl.png/`
+data_with_person | optional | user identity card url string   `https://s3.opentripapp.com/someimagesurl.png/`
+
+
 
 ## Verify Email
 
