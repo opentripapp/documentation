@@ -291,6 +291,39 @@ Parameter | Required | Description
 old_password | true | user old password
 new_password | true | user new password
 
+## Change Email
+
+> Result
+
+```json
+{
+  "error": false
+}
+```
+
+Updating user email address
+
+### Endpoint
+
+`PUT /user/update/email`
+
+### Header
+
+Name | Required | Description | example
+--------- | ---------| -----------| -------------
+Authorization | true | access_token | `Authorization: Bearer <access_token>`
+
+<aside class="notice">
+You must replace <code>access_token</code> with access_token.
+</aside>
+
+### Parameters
+
+Parameter | Required | Description
+--------- | ---------| -----------
+email | true | new user email address
+
+
 
 ## Verify Email
 
