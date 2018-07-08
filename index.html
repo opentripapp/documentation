@@ -5217,63 +5217,6 @@ time to complete payment : 1 day
 
 <h2 id="wallet-history">Wallet History</h2>
 
-<blockquote>
-<p>Success Result</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"data"</span><span class="p">:[</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-         </span><span class="s2">"_author"</span><span class="p">:</span><span class="s2">"sadasdasda"</span><span class="p">,</span><span class="w">
-         </span><span class="s2">"action"</span><span class="p">:</span><span class="s2">"payment"</span><span class="p">,</span><span class="w">
-         </span><span class="s2">"amount"</span><span class="p">:</span><span class="mi">20</span><span class="w">
-         </span><span class="s2">"initial_balance"</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="w">
-         </span><span class="s2">"final_balance"</span><span class="p">:</span><span class="mi">20</span><span class="p">,</span><span class="w">
-         </span><span class="s2">"note"</span><span class="p">:</span><span class="s2">"OPS3434"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-             </span><span class="s2">"_author"</span><span class="p">:</span><span class="s2">"sadasdasda"</span><span class="p">,</span><span class="w">
-             </span><span class="s2">"action"</span><span class="p">:</span><span class="s2">"refund"</span><span class="p">,</span><span class="w">
-             </span><span class="s2">"amount"</span><span class="p">:</span><span class="mi">20</span><span class="w">
-             </span><span class="s2">"initial_balance"</span><span class="p">:</span><span class="mi">20</span><span class="p">,</span><span class="w">
-             </span><span class="s2">"final_balance"</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="w">
-             </span><span class="s2">"note"</span><span class="p">:</span><span class="s2">"OPS3434"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-             </span><span class="s2">"_author"</span><span class="p">:</span><span class="s2">"sadasdasda"</span><span class="p">,</span><span class="w">
-             </span><span class="s2">"action"</span><span class="p">:</span><span class="s2">"withdrawal"</span><span class="p">,</span><span class="w">
-             </span><span class="s2">"amount"</span><span class="p">:</span><span class="mi">3000</span><span class="w">
-             </span><span class="s2">"initial_balance"</span><span class="p">:</span><span class="mi">4000</span><span class="p">,</span><span class="w">
-             </span><span class="s2">"final_balance"</span><span class="p">:</span><span class="mi">1000</span><span class="p">,</span><span class="w">
-             </span><span class="s2">"note"</span><span class="p">:</span><span class="s2">"OPS3434"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-             </span><span class="s2">"_author"</span><span class="p">:</span><span class="s2">"sadasdasda"</span><span class="p">,</span><span class="w">
-             </span><span class="s2">"action"</span><span class="p">:</span><span class="s2">"transfer"</span><span class="p">,</span><span class="w">
-             </span><span class="s2">"amount"</span><span class="p">:</span><span class="mi">3000</span><span class="w">
-             </span><span class="s2">"initial_balance"</span><span class="p">:</span><span class="mi">4000</span><span class="p">,</span><span class="w">
-             </span><span class="s2">"final_balance"</span><span class="p">:</span><span class="mi">1000</span><span class="p">,</span><span class="w">
-             </span><span class="s2">"note"</span><span class="p">:</span><span class="s2">"OPS3434"</span><span class="w">
-     </span><span class="p">},</span><span class="w">
-     </span><span class="p">{</span><span class="w">
-              </span><span class="s2">"_author"</span><span class="p">:</span><span class="s2">"sadasdasda"</span><span class="p">,</span><span class="w">
-              </span><span class="s2">"action"</span><span class="p">:</span><span class="s2">"receive_transfer"</span><span class="p">,</span><span class="w">
-              </span><span class="s2">"amount"</span><span class="p">:</span><span class="mi">3000</span><span class="w">
-              </span><span class="s2">"initial_balance"</span><span class="p">:</span><span class="mi">4000</span><span class="p">,</span><span class="w">
-              </span><span class="s2">"final_balance"</span><span class="p">:</span><span class="mi">1000</span><span class="p">,</span><span class="w">
-              </span><span class="s2">"note"</span><span class="p">:</span><span class="s2">"OPS3434"</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-       </span><span class="p">{</span><span class="w">
-                 </span><span class="s2">"_author"</span><span class="p">:</span><span class="s2">"sadasdasda"</span><span class="p">,</span><span class="w">
-                 </span><span class="s2">"action"</span><span class="p">:</span><span class="s2">"topup"</span><span class="p">,</span><span class="w">
-                 </span><span class="s2">"amount"</span><span class="p">:</span><span class="mi">3000</span><span class="w">
-                 </span><span class="s2">"initial_balance"</span><span class="p">:</span><span class="mi">4000</span><span class="p">,</span><span class="w">
-                 </span><span class="s2">"final_balance"</span><span class="p">:</span><span class="mi">7000</span><span class="p">,</span><span class="w">
-                 </span><span class="s2">"note"</span><span class="p">:</span><span class="s2">"OPS3434"</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-    </span><span class="p">]</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
 <p>get user wallet history</p>
 
 <h3 id="endpoint">Endpoint</h3>
@@ -5300,47 +5243,31 @@ time to complete payment : 1 day
 <td>start from offset</td>
 </tr>
 <tr>
-<td>sort</td>
-<td>false</td>
-<td>sorting</td>
-</tr>
-<tr>
 <td>action</td>
 <td>optional</td>
 <td>&ldquo;payment&rdquo;,&ldquo;refund&rdquo;,&ldquo;withdrawal&rdquo;,&ldquo;transfer&rdquo;,&ldquo;receive_transfer&rdquo;,&ldquo;topup&rdquo;</td>
 </tr>
 <tr>
-<td>from_date</td>
+<td>service_type</td>
 <td>optional</td>
-<td>&ldquo;2017-05-21&rdquo;</td>
+<td>&ldquo;invoice&rdquo;</td>
 </tr>
 <tr>
-<td>to_date</td>
+<td>status</td>
 <td>optional</td>
-<td>&ldquo;2017-06-1&rdquo;</td>
+<td>status transaction</td>
 </tr>
 </tbody></table>
 
 <h2 id="withdrawal-request">Withdrawal Request</h2>
 
-<blockquote>
-<p>Success Result</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"data"</span><span class="p">:{</span><span class="w">
-     </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"queue"</span><span class="p">,</span><span class="w">
-     </span><span class="s2">"reference_no"</span><span class="p">:</span><span class="mi">231231231</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
 <p>request withdrawal from wallet</p>
 
 <h3 id="endpoint">Endpoint</h3>
 
 <p><code class="prettyprint">POST /wallet/withdrawal</code></p>
 
-<h3 id="query-parameters">Query Parameters</h3>
+<h3 id="body-parameters">Body Parameters</h3>
 
 <table><thead>
 <tr>
@@ -5350,14 +5277,39 @@ time to complete payment : 1 day
 </tr>
 </thead><tbody>
 <tr>
+<td>full_name</td>
+<td>true</td>
+<td>name of user</td>
+</tr>
+<tr>
+<td>email</td>
+<td>true</td>
+<td>email to receive notification</td>
+</tr>
+<tr>
+<td>phone_number</td>
+<td>true</td>
+<td>email to receive notification</td>
+</tr>
+<tr>
 <td>amount</td>
 <td>true</td>
 <td>amount to transfer</td>
 </tr>
 <tr>
-<td>bank_account_id</td>
+<td>bank_account_number</td>
 <td>true</td>
-<td>bank account <code class="prettyprint">_id</code></td>
+<td>bank account number</td>
+</tr>
+<tr>
+<td>bank_name</td>
+<td>true</td>
+<td>name of bank</td>
+</tr>
+<tr>
+<td>reference_number</td>
+<td>optional</td>
+<td>reference number</td>
 </tr>
 <tr>
 <td>password</td>
@@ -5366,13 +5318,8 @@ time to complete payment : 1 day
 </tr>
 <tr>
 <td>notes</td>
-<td>true</td>
-<td>notes withdrawal</td>
-</tr>
-<tr>
-<td>email</td>
 <td>optional</td>
-<td>email to receive notification</td>
+<td>additional notes</td>
 </tr>
 </tbody></table>
 
@@ -5384,36 +5331,11 @@ time to complete payment : 1 day
 
 <h2 id="withdrawal-history">Withdrawal History</h2>
 
-<blockquote>
-<p>Success Result</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"data"</span><span class="p">:[</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-     </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"queue"</span><span class="p">,</span><span class="w">
-     </span><span class="s2">"reference_no"</span><span class="p">:</span><span class="mi">231231231</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-     </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"queue"</span><span class="p">,</span><span class="w">
-     </span><span class="s2">"reference_no"</span><span class="p">:</span><span class="mi">231231231</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"queue"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"reference_no"</span><span class="p">:</span><span class="mi">231231231</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-       </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"queue"</span><span class="p">,</span><span class="w">
-       </span><span class="s2">"reference_no"</span><span class="p">:</span><span class="mi">231231231</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-    </span><span class="p">]</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
 <p>get withdrawal history</p>
 
 <h3 id="endpoint">Endpoint</h3>
 
-<p><code class="prettyprint">GET /wallet/history/withdrawals</code></p>
+<p><code class="prettyprint">GET /wallet/history/withdrawal</code></p>
 
 <h3 id="query-parameters">Query Parameters</h3>
 
@@ -5435,64 +5357,19 @@ time to complete payment : 1 day
 <td>start from offset</td>
 </tr>
 <tr>
-<td>sort</td>
+<td>status</td>
 <td>false</td>
-<td>sorting</td>
-</tr>
-<tr>
-<td>from_date</td>
-<td>optional</td>
-<td>&ldquo;2017-05-21&rdquo;</td>
-</tr>
-<tr>
-<td>to_date</td>
-<td>optional</td>
-<td>&ldquo;2017-06-1&rdquo;</td>
+<td>status transaction</td>
 </tr>
 </tbody></table>
 
-<h2 id="get-detail-withdrawal">Get Detail Withdrawal</h2>
+<h2 id="wallet-history">Wallet History</h2>
 
-<blockquote>
-<p>Success Result</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"data"</span><span class="p">:{</span><span class="w">
-           </span><span class="s2">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">10000</span><span class="p">,</span><span class="w">
-           </span><span class="s2">"beneficiary_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"any"</span><span class="p">,</span><span class="w">
-           </span><span class="s2">"beneficiary_account"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1150006390175"</span><span class="p">,</span><span class="w">
-           </span><span class="s2">"bank"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PT. Bank Mandiri (Persero) Tbk."</span><span class="p">,</span><span class="w">
-           </span><span class="s2">"reference_no"</span><span class="p">:</span><span class="w"> </span><span class="s2">"11540d36312884"</span><span class="p">,</span><span class="w">
-           </span><span class="s2">"notes"</span><span class="p">:</span><span class="w"> </span><span class="s2">"testing"</span><span class="p">,</span><span class="w">
-           </span><span class="s2">"beneficiary_email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tumpistudio@gmail.com"</span><span class="p">,</span><span class="w">
-           </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"queued"</span><span class="p">,</span><span class="w">
-           </span><span class="s2">"created_by"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Muhammad Arizal"</span><span class="p">,</span><span class="w">
-           </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-08-21T10:54:44Z"</span><span class="p">,</span><span class="w">
-           </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-08-21T10:54:44Z"</span><span class="w">
-       </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>get detail withdrawal</p>
+<p>get withdrawal history</p>
 
 <h3 id="endpoint">Endpoint</h3>
 
-<p><code class="prettyprint">GET /wallet/history/withdrawals/:reference_no</code></p>
-
-<h2 id="transfer">Transfer</h2>
-
-<blockquote>
-<p>Success Result</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>transfer to another account</p>
-
-<h3 id="endpoint">Endpoint</h3>
-
-<p><code class="prettyprint">POST /wallet/transfer</code></p>
+<p><code class="prettyprint">GET /wallet/history</code></p>
 
 <h3 id="query-parameters">Query Parameters</h3>
 
@@ -5504,24 +5381,53 @@ time to complete payment : 1 day
 </tr>
 </thead><tbody>
 <tr>
-<td>amount</td>
-<td>true</td>
-<td>amount to transfer</td>
+<td>limit</td>
+<td>false</td>
+<td>limit get user data</td>
 </tr>
 <tr>
-<td>password</td>
-<td>true</td>
-<td>user password</td>
+<td>offset</td>
+<td>false</td>
+<td>start from offset</td>
 </tr>
 <tr>
-<td>email</td>
-<td>true</td>
-<td>another user email to receive transfer</td>
+<td>status</td>
+<td>false</td>
+<td>status transaction</td>
+</tr>
+</tbody></table>
+
+<h2 id="hold-transaction">Hold Transaction</h2>
+
+<p>get hold transaction</p>
+
+<h3 id="endpoint">Endpoint</h3>
+
+<p><code class="prettyprint">GET /wallet/hold</code></p>
+
+<h3 id="query-parameters">Query Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Example/Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>limit</td>
+<td>false</td>
+<td>limit get user data</td>
 </tr>
 <tr>
-<td>notes</td>
-<td>true</td>
-<td>notes of transfer</td>
+<td>offset</td>
+<td>false</td>
+<td>start from offset</td>
+</tr>
+<tr>
+<td>status</td>
+<td>false</td>
+<td>status transaction</td>
 </tr>
 </tbody></table>
 
@@ -5529,34 +5435,6 @@ time to complete payment : 1 day
 
 <h2 id="get-bank-account">Get Bank Account</h2>
 
-<blockquote>
-<p>Success Result</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"data"</span><span class="p">:[</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-         </span><span class="s2">"_id"</span><span class="p">:</span><span class="s2">"sadasdasda"</span><span class="p">,</span><span class="w">
-         </span><span class="s2">"_author"</span><span class="p">:</span><span class="s2">"asdasdsadas"</span><span class="p">,</span><span class="w">
-         </span><span class="s2">"full_name"</span><span class="p">:</span><span class="s2">"Tsubasa"</span><span class="p">,</span><span class="w">
-         </span><span class="s2">"account_number"</span><span class="p">:</span><span class="s2">"123123123"</span><span class="p">,</span><span class="w">
-         </span><span class="s2">"bank_code"</span><span class="p">:</span><span class="s2">"MND"</span><span class="p">,</span><span class="w">
-         </span><span class="s2">"bank_name"</span><span class="p">:</span><span class="s2">"MANDIRI"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"_id"</span><span class="p">:</span><span class="s2">"sadasdasda"</span><span class="p">,</span><span class="w">
-         </span><span class="s2">"_author"</span><span class="p">:</span><span class="s2">"asdasdsadas"</span><span class="p">,</span><span class="w">
-         </span><span class="s2">"full_name"</span><span class="p">:</span><span class="s2">"Tsubasa"</span><span class="p">,</span><span class="w">
-         </span><span class="s2">"account_number"</span><span class="p">:</span><span class="s2">"123123123"</span><span class="p">,</span><span class="w">
-         </span><span class="s2">"bank_code"</span><span class="p">:</span><span class="s2">"MND"</span><span class="p">,</span><span class="w">
-         </span><span class="s2">"bank_name"</span><span class="p">:</span><span class="s2">"MANDIRI"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="err">...</span><span class="w">
-    </span><span class="err">...</span><span class="w">
-    </span><span class="err">...</span><span class="w">
-    </span><span class="p">]</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
 <p>get user bank account</p>
 
 <h3 id="endpoint">Endpoint</h3>
@@ -5582,38 +5460,17 @@ time to complete payment : 1 day
 <td>false</td>
 <td>start from offset</td>
 </tr>
-<tr>
-<td>sort</td>
-<td>false</td>
-<td>sorting</td>
-</tr>
 </tbody></table>
 
 <h2 id="new-bank-account">New Bank Account</h2>
 
-<blockquote>
-<p>Success Result</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"data"</span><span class="p">:</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-         </span><span class="s2">"_id"</span><span class="p">:</span><span class="s2">"sadasdasda"</span><span class="p">,</span><span class="w">
-         </span><span class="s2">"_author"</span><span class="p">:</span><span class="s2">"asdasdsadas"</span><span class="p">,</span><span class="w">
-         </span><span class="s2">"full_name"</span><span class="p">:</span><span class="s2">"Tsubasa"</span><span class="p">,</span><span class="w">
-         </span><span class="s2">"account_number"</span><span class="p">:</span><span class="s2">"123123123"</span><span class="p">,</span><span class="w">
-         </span><span class="s2">"bank_code"</span><span class="p">:</span><span class="s2">"MND"</span><span class="p">,</span><span class="w">
-         </span><span class="s2">"bank_name"</span><span class="p">:</span><span class="s2">"MANDIRI"</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
 <p>create new user bank account</p>
 
 <h3 id="endpoint">Endpoint</h3>
 
 <p><code class="prettyprint">POST /wallet/bank_account</code></p>
 
-<h3 id="query-parameters">Query Parameters</h3>
+<h3 id="body-parameters">Body Parameters</h3>
 
 <table><thead>
 <tr>
@@ -5647,99 +5504,6 @@ time to complete payment : 1 day
 <aside class="notice">
 Here supported bank account : http://iris-docs.midtrans.com/#supported-banks
 </aside>
-
-<h2 id="update-bank-account">Update Bank Account</h2>
-
-<blockquote>
-<p>Success Result</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"data"</span><span class="p">:</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-         </span><span class="s2">"_id"</span><span class="p">:</span><span class="s2">"sadasdasda"</span><span class="p">,</span><span class="w">
-         </span><span class="s2">"_author"</span><span class="p">:</span><span class="s2">"asdasdsadas"</span><span class="p">,</span><span class="w">
-         </span><span class="s2">"full_name"</span><span class="p">:</span><span class="s2">"Tsubasa"</span><span class="p">,</span><span class="w">
-         </span><span class="s2">"account_number"</span><span class="p">:</span><span class="s2">"123123123"</span><span class="p">,</span><span class="w">
-         </span><span class="s2">"bank_code"</span><span class="p">:</span><span class="s2">"MND"</span><span class="p">,</span><span class="w">
-         </span><span class="s2">"bank_name"</span><span class="p">:</span><span class="s2">"MANDIRI"</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>updating user bank account</p>
-
-<h3 id="endpoint">Endpoint</h3>
-
-<p><code class="prettyprint">PUT /wallet/bank_account/:id/update</code></p>
-
-<aside class="notice">
-You must replace <code>:id</code> with bank account _id.
-</aside>
-
-<h3 id="query-parameters">Query Parameters</h3>
-
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Required</th>
-<th>Example/Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>full_name</td>
-<td>optional</td>
-<td>full name</td>
-</tr>
-<tr>
-<td>account_number</td>
-<td>optional</td>
-<td>account number</td>
-</tr>
-<tr>
-<td>bank_code</td>
-<td>optional</td>
-<td>bank code</td>
-</tr>
-<tr>
-<td>bank_name</td>
-<td>optional</td>
-<td>bank name</td>
-</tr>
-</tbody></table>
-
-<h2 id="delete-bank-account">Delete Bank Account</h2>
-
-<blockquote>
-<p>Success Result</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>updating user bank account</p>
-
-<h3 id="endpoint">Endpoint</h3>
-
-<p><code class="prettyprint">DELETE /wallet/bank_account/:id/delete</code></p>
-
-<aside class="notice">
-You must replace <code>:id</code> with bank account _id.
-</aside>
-
-<h2 id="delete-all-bank-account">Delete All Bank Account</h2>
-
-<blockquote>
-<p>Success Result</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>updating user bank account</p>
-
-<h3 id="endpoint">Endpoint</h3>
-
-<p><code class="prettyprint">DELETE /wallet/bank_account</code></p>
 
           <h1 id="chat">Chat</h1>
 
