@@ -5507,163 +5507,222 @@ Here supported bank account : http://iris-docs.midtrans.com/#supported-banks
 
           <h1 id="chat">Chat</h1>
 
-<h2 id="get-personal-chat">Get Personal Chat</h2>
+<p>Use <code class="prettyprint">https://socket.opentripapp.com/</code> for access chat</p>
+
+<h2 id="get-list-room">Get List Room</h2>
 
 <blockquote>
 <p>Success Result</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"data"</span><span class="p">:{</span><span class="w">
-               </span><span class="s2">"results"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                   </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                       </span><span class="s2">"current_page"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-                       </span><span class="s2">"total_room"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
-                   </span><span class="p">},</span><span class="w">
-                   </span><span class="s2">"rooms_info"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-                       </span><span class="p">{</span><span class="w">
-                           </span><span class="s2">"last_comment_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">661730</span><span class="p">,</span><span class="w">
-                           </span><span class="s2">"last_comment_message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Yoi bos"</span><span class="p">,</span><span class="w">
-                           </span><span class="s2">"last_comment_timestamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-08-24T12:01:05Z"</span><span class="p">,</span><span class="w">
-                           </span><span class="s2">"participants"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-                               </span><span class="p">{</span><span class="w">
-                                   </span><span class="s2">"avatar_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://qiscuss3.s3.amazonaws.com/uploads/55c0c6ee486be6b686d52e5b9bbedbbf/2.png"</span><span class="p">,</span><span class="w">
-                                   </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tumpistudio@gmail.com"</span><span class="p">,</span><span class="w">
-                                   </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">134079</span><span class="p">,</span><span class="w">
-                                   </span><span class="s2">"last_comment_read_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">661730</span><span class="p">,</span><span class="w">
-                                   </span><span class="s2">"last_comment_received_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-                                   </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"John doe"</span><span class="w">
-                               </span><span class="p">},</span><span class="w">
-                               </span><span class="p">{</span><span class="w">
-                                   </span><span class="s2">"avatar_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://qiscuss3.s3.amazonaws.com/uploads/55c0c6ee486be6b686d52e5b9bbedbbf/2.png"</span><span class="p">,</span><span class="w">
-                                   </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"muhammadarizals1@gmail.com"</span><span class="p">,</span><span class="w">
-                                   </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">134024</span><span class="p">,</span><span class="w">
-                                   </span><span class="s2">"last_comment_read_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">661682</span><span class="p">,</span><span class="w">
-                                   </span><span class="s2">"last_comment_received_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-                                   </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Arizal"</span><span class="w">
-                               </span><span class="p">}</span><span class="w">
-                           </span><span class="p">],</span><span class="w">
-                           </span><span class="s2">"room_avatar_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-                           </span><span class="s2">"room_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">31387</span><span class="p">,</span><span class="w">
-                           </span><span class="s2">"room_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"John doe"</span><span class="p">,</span><span class="w">
-                           </span><span class="s2">"room_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"single"</span><span class="p">,</span><span class="w">
-                           </span><span class="s2">"unread_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
-                       </span><span class="p">},</span><span class="w">
-                       </span><span class="p">{</span><span class="w">
-                           </span><span class="s2">"last_comment_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">661714</span><span class="p">,</span><span class="w">
-                           </span><span class="s2">"last_comment_message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ohayo"</span><span class="p">,</span><span class="w">
-                           </span><span class="s2">"last_comment_timestamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-08-24T12:00:18Z"</span><span class="p">,</span><span class="w">
-                           </span><span class="s2">"participants"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-                               </span><span class="p">{</span><span class="w">
-                                   </span><span class="s2">"avatar_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://qiscuss3.s3.amazonaws.com/uploads/55c0c6ee486be6b686d52e5b9bbedbbf/2.png"</span><span class="p">,</span><span class="w">
-                                   </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"muhammadarizals1@gmail.com"</span><span class="p">,</span><span class="w">
-                                   </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">134024</span><span class="p">,</span><span class="w">
-                                   </span><span class="s2">"last_comment_read_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">661714</span><span class="p">,</span><span class="w">
-                                   </span><span class="s2">"last_comment_received_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-                                   </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Arizal"</span><span class="w">
-                               </span><span class="p">}</span><span class="w">
-                           </span><span class="p">],</span><span class="w">
-                           </span><span class="s2">"room_avatar_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-                           </span><span class="s2">"room_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">31384</span><span class="p">,</span><span class="w">
-                           </span><span class="s2">"room_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-                           </span><span class="s2">"room_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"single"</span><span class="p">,</span><span class="w">
-                           </span><span class="s2">"unread_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
-                       </span><span class="p">},</span><span class="w">
-                       </span><span class="p">{</span><span class="w">
-                           </span><span class="s2">"last_comment_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-                           </span><span class="s2">"last_comment_message"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-                           </span><span class="s2">"last_comment_timestamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-08-24T11:22:14Z"</span><span class="p">,</span><span class="w">
-                           </span><span class="s2">"participants"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-                               </span><span class="p">{</span><span class="w">
-                                   </span><span class="s2">"avatar_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://qiscuss3.s3.amazonaws.com/uploads/55c0c6ee486be6b686d52e5b9bbedbbf/2.png"</span><span class="p">,</span><span class="w">
-                                   </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"muhammadarizals1@gmail.com"</span><span class="p">,</span><span class="w">
-                                   </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">134024</span><span class="p">,</span><span class="w">
-                                   </span><span class="s2">"last_comment_read_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-                                   </span><span class="s2">"last_comment_received_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-                                   </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Arizal"</span><span class="w">
-                               </span><span class="p">},</span><span class="w">
-                               </span><span class="p">{</span><span class="w">
-                                   </span><span class="s2">"avatar_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://qiscuss3.s3.amazonaws.com/uploads/55c0c6ee486be6b686d52e5b9bbedbbf/2.png"</span><span class="p">,</span><span class="w">
-                                   </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tes5@tes.com"</span><span class="p">,</span><span class="w">
-                                   </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">134042</span><span class="p">,</span><span class="w">
-                                   </span><span class="s2">"last_comment_read_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-                                   </span><span class="s2">"last_comment_received_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-                                   </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pasijo"</span><span class="w">
-                               </span><span class="p">}</span><span class="w">
-                           </span><span class="p">],</span><span class="w">
-                           </span><span class="s2">"room_avatar_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-                           </span><span class="s2">"room_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">31375</span><span class="p">,</span><span class="w">
-                           </span><span class="s2">"room_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pasijo"</span><span class="p">,</span><span class="w">
-                           </span><span class="s2">"room_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"single"</span><span class="p">,</span><span class="w">
-                           </span><span class="s2">"unread_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
-                       </span><span class="p">},</span><span class="w">
-                       </span><span class="p">{</span><span class="w">
-                           </span><span class="s2">"last_comment_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-                           </span><span class="s2">"last_comment_message"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-                           </span><span class="s2">"last_comment_timestamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-08-24T11:10:39Z"</span><span class="p">,</span><span class="w">
-                           </span><span class="s2">"participants"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-                               </span><span class="p">{</span><span class="w">
-                                   </span><span class="s2">"avatar_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://qiscuss3.s3.amazonaws.com/uploads/55c0c6ee486be6b686d52e5b9bbedbbf/2.png"</span><span class="p">,</span><span class="w">
-                                   </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tes@tes.com"</span><span class="p">,</span><span class="w">
-                                   </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">134028</span><span class="p">,</span><span class="w">
-                                   </span><span class="s2">"last_comment_read_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-                                   </span><span class="s2">"last_comment_received_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-                                   </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ssttuiui "</span><span class="w">
-                               </span><span class="p">},</span><span class="w">
-                               </span><span class="p">{</span><span class="w">
-                                   </span><span class="s2">"avatar_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://qiscuss3.s3.amazonaws.com/uploads/55c0c6ee486be6b686d52e5b9bbedbbf/2.png"</span><span class="p">,</span><span class="w">
-                                   </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"muhammadarizals1@gmail.com"</span><span class="p">,</span><span class="w">
-                                   </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">134024</span><span class="p">,</span><span class="w">
-                                   </span><span class="s2">"last_comment_read_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-                                   </span><span class="s2">"last_comment_received_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-                                   </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Arizal"</span><span class="w">
-                               </span><span class="p">}</span><span class="w">
-                           </span><span class="p">],</span><span class="w">
-                           </span><span class="s2">"room_avatar_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-                           </span><span class="s2">"room_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">31369</span><span class="p">,</span><span class="w">
-                           </span><span class="s2">"room_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ssttuiui "</span><span class="p">,</span><span class="w">
-                           </span><span class="s2">"room_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"single"</span><span class="p">,</span><span class="w">
-                           </span><span class="s2">"unread_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
-                       </span><span class="p">},</span><span class="w">
-                       </span><span class="p">{</span><span class="w">
-                           </span><span class="s2">"last_comment_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-                           </span><span class="s2">"last_comment_message"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-                           </span><span class="s2">"last_comment_timestamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-08-24T11:09:41Z"</span><span class="p">,</span><span class="w">
-                           </span><span class="s2">"participants"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-                               </span><span class="p">{</span><span class="w">
-                                   </span><span class="s2">"avatar_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://qiscuss3.s3.amazonaws.com/uploads/55c0c6ee486be6b686d52e5b9bbedbbf/2.png"</span><span class="p">,</span><span class="w">
-                                   </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test"</span><span class="p">,</span><span class="w">
-                                   </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">133818</span><span class="p">,</span><span class="w">
-                                   </span><span class="s2">"last_comment_read_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-                                   </span><span class="s2">"last_comment_received_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-                                   </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sssasdassdasd"</span><span class="w">
-                               </span><span class="p">},</span><span class="w">
-                               </span><span class="p">{</span><span class="w">
-                                   </span><span class="s2">"avatar_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://qiscuss3.s3.amazonaws.com/uploads/55c0c6ee486be6b686d52e5b9bbedbbf/2.png"</span><span class="p">,</span><span class="w">
-                                   </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"muhammadarizals1@gmail.com"</span><span class="p">,</span><span class="w">
-                                   </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">134024</span><span class="p">,</span><span class="w">
-                                   </span><span class="s2">"last_comment_read_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-                                   </span><span class="s2">"last_comment_received_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-                                   </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Arizal"</span><span class="w">
-                               </span><span class="p">}</span><span class="w">
-                           </span><span class="p">],</span><span class="w">
-                           </span><span class="s2">"room_avatar_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-                           </span><span class="s2">"room_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">31368</span><span class="p">,</span><span class="w">
-                           </span><span class="s2">"room_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sssasdassdasd"</span><span class="p">,</span><span class="w">
-                           </span><span class="s2">"room_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"single"</span><span class="p">,</span><span class="w">
-                           </span><span class="s2">"unread_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
-                       </span><span class="p">}</span><span class="w">
-                   </span><span class="p">]</span><span class="w">
-               </span><span class="p">},</span><span class="w">
-               </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="w">
-           </span><span class="p">}</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5b2a212847f60e0019cf2c6c"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-08-01T07:15:23.609Z"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-06-20T09:40:56.315Z"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"private"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"all_members_are_administrators"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"members"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="p">{</span><span class="w">
+                        </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                            </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"59cb719eec00de0010222d5a"</span><span class="p">,</span><span class="w">
+                            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Kurniawan Yudha"</span><span class="p">,</span><span class="w">
+                            </span><span class="s2">"profile_picture"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://s3-ap-southeast-1.amazonaws.com/opentrip-media/59cb719eec00de0010222d5a_e4e4069a961c39cd.jpg"</span><span class="w">
+                        </span><span class="p">},</span><span class="w">
+                        </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"member"</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5b2a212847f60e0019cf2c6e"</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"can_add_web_page_previews"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"can_send_other_messages"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"can_send_media_messages"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"can_send_messages"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"can_promote_members"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"can_pin_messages"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"can_restrict_members"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"can_invite_users"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"can_delete_messages"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"can_edit_messages"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"can_post_messages"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"can_change_info"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"can_be_edited"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"unread_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="w">
+                    </span><span class="p">},</span><span class="w">
+                    </span><span class="p">{</span><span class="w">
+                        </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                            </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"59c5c89665a538001088798f"</span><span class="p">,</span><span class="w">
+                            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"arizal saputro"</span><span class="p">,</span><span class="w">
+                            </span><span class="s2">"profile_picture"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://s3-ap-southeast-1.amazonaws.com/opentrip-media-20f95100/media/59c5c89665a538001088798f_103a61372d1a1561.jpg"</span><span class="w">
+                        </span><span class="p">},</span><span class="w">
+                        </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"creator"</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5b2a212847f60e0019cf2c6d"</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"can_add_web_page_previews"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"can_send_other_messages"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"can_send_media_messages"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"can_send_messages"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"can_promote_members"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"can_pin_messages"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"can_restrict_members"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"can_invite_users"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"can_delete_messages"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"can_edit_messages"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"can_post_messages"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"can_change_info"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"can_be_edited"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"unread_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+                    </span><span class="p">}</span><span class="w">
+                </span><span class="p">],</span><span class="w">
+                </span><span class="s2">"photo"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"small_file_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://s3-ap-southeast-1.amazonaws.com/opentrip-media/59cb719eec00de0010222d5a_e4e4069a961c39cd.jpg"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"big_file_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://s3-ap-southeast-1.amazonaws.com/opentrip-media/59cb719eec00de0010222d5a_e4e4069a961c39cd.jpg"</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="s2">"__v"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"last_message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hoho"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"last_message_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-08-01T07:15:23.603Z"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"from"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"59cb719eec00de0010222d5a"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Kurniawan Yudha"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"profile_picture"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://s3-ap-southeast-1.amazonaws.com/opentrip-media/59cb719eec00de0010222d5a_e4e4069a961c39cd.jpg"</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="s2">"unread_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                        </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5a96a4f75b31a360b6848aa4"</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-08-01T07:15:13.069Z"</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-20T13:28:52.552Z"</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"group"</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Open Trip Krakatau 17-18 Maret 2018"</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Hai para pencari liburan, ayo join trip ke krakatau 17-18 maret ini bareng @santaisejenak.id detail dibawah yaa"</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"all_members_are_administrators"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"invite_link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9GVrn8dYHscJBUras"</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"members"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                            </span><span class="p">{</span><span class="w">
+                                </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                    </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5a68424404a9ca001262fa20"</span><span class="p">,</span><span class="w">
+                                    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rudi Anton"</span><span class="p">,</span><span class="w">
+                                    </span><span class="s2">"profile_picture"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://s3-ap-southeast-1.amazonaws.com/opentrip-media/5a68424404a9ca001262fa20_1424deb514b86430.jpg"</span><span class="w">
+                                </span><span class="p">},</span><span class="w">
+                                </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"member"</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"can_add_web_page_previews"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"can_send_other_messages"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"can_send_media_messages"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"can_send_messages"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"can_promote_members"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"can_pin_messages"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"can_restrict_members"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"can_invite_users"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"can_delete_messages"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"can_edit_messages"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"can_post_messages"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"can_change_info"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"can_be_edited"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"unread_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">184</span><span class="w">
+                            </span><span class="p">},</span><span class="w">
+                            </span><span class="p">{</span><span class="w">
+                                </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                    </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5a5c658004a9ca001262f947"</span><span class="p">,</span><span class="w">
+                                    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bentar Septian"</span><span class="p">,</span><span class="w">
+                                    </span><span class="s2">"profile_picture"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://s3-ap-southeast-1.amazonaws.com/opentrip-media/5a5c658004a9ca001262f947_c62c250327ca591c"</span><span class="w">
+                                </span><span class="p">},</span><span class="w">
+                                </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"creator"</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"can_add_web_page_previews"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"can_send_other_messages"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"can_send_media_messages"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"can_send_messages"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"can_promote_members"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"can_pin_messages"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"can_restrict_members"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"can_invite_users"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"can_delete_messages"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"can_edit_messages"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"can_post_messages"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"can_change_info"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"can_be_edited"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"unread_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="w">
+                            </span><span class="p">},</span><span class="w">
+                            </span><span class="p">{</span><span class="w">
+                                </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                    </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"59c63a5fe0bc2400117a87fc"</span><span class="p">,</span><span class="w">
+                                    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Open Trip Official"</span><span class="p">,</span><span class="w">
+                                    </span><span class="s2">"profile_picture"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://s3-ap-southeast-1.amazonaws.com/opentrip-media/59c63a5fe0bc2400117a87fc_81bba8be06307fce.jpg"</span><span class="w">
+                                </span><span class="p">},</span><span class="w">
+                                </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"creator"</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"can_add_web_page_previews"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"can_send_other_messages"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"can_send_media_messages"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"can_send_messages"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"can_promote_members"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"can_pin_messages"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"can_restrict_members"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"can_invite_users"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"can_delete_messages"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"can_edit_messages"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"can_post_messages"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"can_change_info"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"can_be_edited"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"unread_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="w">
+                            </span><span class="p">},</span><span class="w">
+                            </span><span class="p">{</span><span class="w">
+                                </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                    </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5a94c7a01fba58000f0bbdc8"</span><span class="p">,</span><span class="w">
+                                    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Forrtuner"</span><span class="w">
+                                </span><span class="p">},</span><span class="w">
+                                </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"creator"</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"can_add_web_page_previews"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"can_send_other_messages"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"can_send_media_messages"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"can_send_messages"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"can_promote_members"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"can_pin_messages"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"can_restrict_members"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"can_invite_users"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"can_delete_messages"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"can_edit_messages"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"can_post_messages"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"can_change_info"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"can_be_edited"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"unread_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">146</span><span class="w">
+                            </span><span class="p">},</span><span class="w">
+                            </span><span class="p">{</span><span class="w">
+                                </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                    </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"59c5c89665a538001088798f"</span><span class="p">,</span><span class="w">
+                                    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"arizal saputro"</span><span class="p">,</span><span class="w">
+                                    </span><span class="s2">"profile_picture"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://s3-ap-southeast-1.amazonaws.com/opentrip-media-20f95100/media/59c5c89665a538001088798f_103a61372d1a1561.jpg"</span><span class="w">
+                                </span><span class="p">},</span><span class="w">
+                                </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"creator"</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"can_add_web_page_previews"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"can_send_other_messages"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"can_send_media_messages"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"can_send_messages"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"can_promote_members"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"can_pin_messages"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"can_restrict_members"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"can_invite_users"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"can_delete_messages"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"can_edit_messages"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"can_post_messages"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"can_change_info"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"can_be_edited"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"unread_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+                            </span><span class="p">}</span><span class="w">
+                        </span><span class="p">],</span><span class="w">
+                        </span><span class="s2">"photo"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                            </span><span class="s2">"small_file_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://s3-ap-southeast-1.amazonaws.com/opentrip-media/59c8721867db5c000f2b9ca7_a48967e412070c42.jpg"</span><span class="p">,</span><span class="w">
+                            </span><span class="s2">"big_file_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://s3-ap-southeast-1.amazonaws.com/opentrip-media/59c8721867db5c000f2b9ca7_a48967e412070c42.jpg"</span><span class="w">
+                        </span><span class="p">},</span><span class="w">
+                        </span><span class="s2">"last_message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"chat"</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"last_message_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-08-01T07:15:13.060Z"</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"__v"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"unread_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+                    </span><span class="p">},</span><span class="w">
+                    </span><span class="err">....</span><span class="w">
+    </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>get user personal chat</p>
+<p>get user chat room list</p>
 
 <h3 id="endpoint">Endpoint</h3>
 
-<p><code class="prettyprint">GET /chat/personal</code></p>
+<p><code class="prettyprint">GET /chat/list</code></p>
 
 <h3 id="query-parameters">Query Parameters</h3>
 
@@ -5675,57 +5734,62 @@ Here supported bank account : http://iris-docs.midtrans.com/#supported-banks
 </tr>
 </thead><tbody>
 <tr>
-<td>page</td>
+<td>sort</td>
 <td>optional</td>
-<td>1</td>
+<td>&lsquo;createdAt&rsquo; &lsquo;last_message_date&rsquo;</td>
+</tr>
+<tr>
+<td>limit</td>
+<td>optional</td>
+<td>limit of data to get <code class="prettyprint">10</code>  <code class="prettyprint">15</code></td>
+</tr>
+<tr>
+<td>offset</td>
+<td>optional</td>
+<td>start to get data  <code class="prettyprint">0</code> <code class="prettyprint">15</code> <code class="prettyprint">30</code></td>
+</tr>
+<tr>
+<td>type</td>
+<td>optional</td>
+<td>type of chat <code class="prettyprint">group</code> <code class="prettyprint">private</code></td>
 </tr>
 </tbody></table>
 
-<h2 id="get-group-chat">Get Group Chat</h2>
+<h2 id="get-list-message">Get List Message</h2>
 
 <blockquote>
 <p>Success Result</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"data"</span><span class="p">:{</span><span class="w">
-               </span><span class="s2">"results"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                   </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                       </span><span class="s2">"current_page"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-                       </span><span class="s2">"total_room"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
-                   </span><span class="p">},</span><span class="w">
-                   </span><span class="s2">"rooms_info"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-                        </span><span class="p">{</span><span class="w">
-                                      </span><span class="s2">"last_comment_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-                                      </span><span class="s2">"last_comment_message"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-                                      </span><span class="s2">"last_comment_timestamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-09-03T07:20:37Z"</span><span class="p">,</span><span class="w">
-                                      </span><span class="s2">"room_avatar_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-                                      </span><span class="s2">"room_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">32898</span><span class="p">,</span><span class="w">
-                                      </span><span class="s2">"room_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"trip name"</span><span class="p">,</span><span class="w">
-                                      </span><span class="s2">"room_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"group"</span><span class="p">,</span><span class="w">
-                                      </span><span class="s2">"unread_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
-                                  </span><span class="p">},</span><span class="w">
-                                  </span><span class="p">{</span><span class="w">
-                                      </span><span class="s2">"last_comment_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-                                      </span><span class="s2">"last_comment_message"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-                                      </span><span class="s2">"last_comment_timestamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-09-03T07:13:34Z"</span><span class="p">,</span><span class="w">
-                                      </span><span class="s2">"room_avatar_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-                                      </span><span class="s2">"room_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">32896</span><span class="p">,</span><span class="w">
-                                      </span><span class="s2">"room_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"trip name"</span><span class="p">,</span><span class="w">
-                                      </span><span class="s2">"room_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"group"</span><span class="p">,</span><span class="w">
-                                      </span><span class="s2">"unread_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
-                                  </span><span class="p">},</span><span class="w">
-                   </span><span class="p">]</span><span class="w">
-               </span><span class="p">},</span><span class="w">
-               </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="w">
-           </span><span class="p">}</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:[</span><span class="w">
+         </span><span class="p">{</span><span class="w">
+                 </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5b61638d495b90000f5bd4bb"</span><span class="p">,</span><span class="w">
+                 </span><span class="s2">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-08-01T07:38:53.701Z"</span><span class="p">,</span><span class="w">
+                 </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-08-01T07:38:53.701Z"</span><span class="p">,</span><span class="w">
+                 </span><span class="s2">"from"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                     </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"59c5c89665a538001088798f"</span><span class="p">,</span><span class="w">
+                     </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"arizal saputro"</span><span class="p">,</span><span class="w">
+                     </span><span class="s2">"profile_picture"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://s3-ap-southeast-1.amazonaws.com/opentrip-media-20f95100/media/59c5c89665a538001088798f_103a61372d1a1561.jpg"</span><span class="w">
+                 </span><span class="p">},</span><span class="w">
+                 </span><span class="s2">"chat_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5b2a212847f60e0019cf2c6c"</span><span class="p">,</span><span class="w">
+                 </span><span class="s2">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ini"</span><span class="p">,</span><span class="w">
+                 </span><span class="s2">"new_chat_members"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+                 </span><span class="s2">"photo"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+                 </span><span class="s2">"caption_entities"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+                 </span><span class="s2">"entities"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+                 </span><span class="s2">"read"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+                 </span><span class="s2">"__v"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+             </span><span class="p">},</span><span class="w">
+             </span><span class="err">...</span><span class="w">
+    </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>get user group chat</p>
+<p>get message of chat</p>
 
 <h3 id="endpoint">Endpoint</h3>
 
-<p><code class="prettyprint">GET /chat/group</code></p>
+<p><code class="prettyprint">GET /chat/message/list</code></p>
 
 <h3 id="query-parameters">Query Parameters</h3>
 
@@ -5737,40 +5801,197 @@ Here supported bank account : http://iris-docs.midtrans.com/#supported-banks
 </tr>
 </thead><tbody>
 <tr>
-<td>page</td>
-<td>optional</td>
-<td>1</td>
-</tr>
-</tbody></table>
-
-<h2 id="leave-chat">Leave Chat</h2>
-
-<blockquote>
-<p>Success Result</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>user leave chat</p>
-
-<h3 id="endpoint">Endpoint</h3>
-
-<p><code class="prettyprint">POST /chat/leave</code></p>
-
-<h3 id="query-parameters">Query Parameters</h3>
-
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Required</th>
-<th>Example/Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>room_id</td>
+<td>chat_id</td>
 <td>true</td>
-<td>&ldquo;2324324&rdquo;</td>
+<td><code class="prettyprint">_id</code> from room</td>
+</tr>
+<tr>
+<td>limit</td>
+<td>optional</td>
+<td>limit of data to get <code class="prettyprint">10</code>  <code class="prettyprint">15</code></td>
+</tr>
+<tr>
+<td>offset</td>
+<td>optional</td>
+<td>start to get data  <code class="prettyprint">0</code> <code class="prettyprint">15</code> <code class="prettyprint">30</code></td>
+</tr>
+</tbody></table>
+
+<h2 id="create-room">Create Room</h2>
+
+<blockquote>
+<p>Success Result</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5b6166c1495b90000f5bd4c1"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-08-01T07:52:33.072Z"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-08-01T07:52:33.072Z"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Krakatau Group"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"group"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"all_members_are_administrators"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"invite_link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bW7rsNrCrW5OSZy8"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"members"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                        </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"59cb719eec00de0010222d5a"</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Kurniawan Yudha"</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"profile_picture"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://s3-ap-southeast-1.amazonaws.com/opentrip-media/59cb719eec00de0010222d5a_e4e4069a961c39cd.jpg"</span><span class="w">
+                    </span><span class="p">},</span><span class="w">
+                    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"member"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5b6166c1495b90000f5bd4c3"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"can_add_web_page_previews"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"can_send_other_messages"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"can_send_media_messages"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"can_send_messages"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"can_promote_members"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"can_pin_messages"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"can_restrict_members"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"can_invite_users"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"can_delete_messages"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"can_edit_messages"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"can_post_messages"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"can_change_info"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"can_be_edited"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"unread_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                        </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"59c5c89665a538001088798f"</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"arizal saputro"</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"profile_picture"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://s3-ap-southeast-1.amazonaws.com/opentrip-media-20f95100/media/59c5c89665a538001088798f_103a61372d1a1561.jpg"</span><span class="w">
+                    </span><span class="p">},</span><span class="w">
+                    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"creator"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5b6166c1495b90000f5bd4c2"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"can_add_web_page_previews"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"can_send_other_messages"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"can_send_media_messages"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"can_send_messages"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"can_promote_members"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"can_pin_messages"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"can_restrict_members"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"can_invite_users"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"can_delete_messages"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"can_edit_messages"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"can_post_messages"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"can_change_info"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"can_be_edited"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"unread_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="s2">"photo"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"small_file_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://qiscuss3.s3.amazonaws.com/uploads/55c0c6ee486be6b686d52e5b9bbedbbf/2.png"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"big_file_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://qiscuss3.s3.amazonaws.com/uploads/55c0c6ee486be6b686d52e5b9bbedbbf/2.png"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="s2">"__v"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"unread_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>user create 1-1 room or group room</p>
+
+<h3 id="endpoint">Endpoint</h3>
+
+<p><code class="prettyprint">POST /chat/create</code></p>
+
+<h3 id="body-parameters">Body Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Example/Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>type</td>
+<td>true</td>
+<td>type of room <code class="prettyprint">private</code> <code class="prettyprint">group</code></td>
+</tr>
+<tr>
+<td>users</td>
+<td>true</td>
+<td>array of users <code class="prettyprint">_id</code></td>
+</tr>
+<tr>
+<td>title</td>
+<td>optional</td>
+<td>tittle of group room</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>Example body</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"type"</span><span class="p">:</span><span class="s2">"group"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"users"</span><span class="p">:[</span><span class="s2">"59cb719eec00de0010222d5a"</span><span class="p">,</span><span class="s2">"5a94c7a01fba58000f0bbdc8"</span><span class="p">],</span><span class="w">
+  </span><span class="s2">"title"</span><span class="p">:</span><span class="s2">"Krakatau Group"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"photo"</span><span class="p">:{</span><span class="w">
+      </span><span class="s2">"small_fil_url"</span><span class="p">:</span><span class="s2">"https://qiscuss3.s3.amazonaws.com/uploads/55c0c6ee486be6b686d52e5b9bbedbbf/2.png"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"all_members_are_administrators"</span><span class="p">:</span><span class="kc">false</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="s2">"type"</span><span class="p">:</span><span class="s2">"private"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"users"</span><span class="p">:[</span><span class="s2">"59cb719eec00de0010222d5a"</span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<h2 id="send-message">Send Message</h2>
+
+<blockquote>
+<p>Success Result</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"__v"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-08-01T08:06:29.218Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-08-01T08:06:29.218Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"from"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"59c5c89665a538001088798f"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"arizal saputro"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"profile_picture"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://s3-ap-southeast-1.amazonaws.com/opentrip-media-20f95100/media/59c5c89665a538001088798f_103a61372d1a1561.jpg"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"chat_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5b2a212847f60e0019cf2c6c"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Hello,i am send messages from api"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5b616a05495b90000f5bd4ce"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"new_chat_members"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+        </span><span class="s2">"photo"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+        </span><span class="s2">"caption_entities"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+        </span><span class="s2">"entities"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+        </span><span class="s2">"read"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>send message</p>
+
+<h3 id="endpoint">Endpoint</h3>
+
+<p><code class="prettyprint">POST /chat/send_message</code></p>
+
+<h3 id="query-parameters">Query Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Example/Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>chat_id</td>
+<td>true</td>
+<td><code class="prettyprint">_id</code> of chat room</td>
+</tr>
+<tr>
+<td>text</td>
+<td>true</td>
+<td>text message</td>
 </tr>
 </tbody></table>
 
