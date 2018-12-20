@@ -96,6 +96,8 @@ limit     | false   | `10` default limit is `10`
 sort      | false   | `date.start` default is `date.start` `sort` could be anything
 leader    |false | `leader _id` , to get spesific leader trip
 user_type | false | `leader` for trip leader only
+max_price | optional | maximum price trip
+min_price | optional | minimum price trip
 
 ### Trip Type
 Parameter | Required | Example
